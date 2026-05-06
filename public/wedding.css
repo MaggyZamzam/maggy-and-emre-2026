@@ -130,7 +130,7 @@ nav a {
 
 .hero h1 {
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(86px, 16vw, 170px);
+  font-size: clamp(88px, 16vw, 175px);
   line-height: 0.9;
   font-style: italic;
   margin: 70px 0 40px;
