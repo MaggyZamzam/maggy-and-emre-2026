@@ -3,24 +3,224 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maggy & Emre</title>
+  <title>Maggy & Emre — October 23, 2026</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
   <link rel="stylesheet" href="wedding.css" />
 </head>
+
 <body>
 
-  <section class="hero">
-    <p class="intro">PLEASE JOIN US FOR THE WEDDING OF</p>
-    <h1>MAGGY<br>&amp;<br>EMRE</h1>
-    <p class="date">10.23.2026</p>
-    <p class="location">FOUR SEASONS HOTEL CAIRO AT NILE PLAZA</p>
-  </section>
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">M &amp; E</div>
+    <div class="menu">☰</div>
+  </div>
+</header>
 
-  <section class="gallery">
-    <img src="images/pyramids-sphinx.jpg" alt="Pyramids and Sphinx">
-    <img src="images/grand-egyptian-museum.jpg" alt="Grand Egyptian Museum">
-    <img src="images/nile.jpg" alt="The Nile">
-    <img src="images/sheikh-zayed.jpg" alt="Sheikh Zayed">
-  </section>
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-inner">
+
+    <p class="intro">PLEASE JOIN US FOR THE WEDDING OF</p>
+
+    <h1 class="names">
+      Maggy <br /> &amp; <br /> Emre
+    </h1>
+
+    <p class="hero-date">10.23.2026</p>
+    <p class="hero-location">
+      FOUR SEASONS HOTEL CAIRO AT NILE PLAZA
+    </p>
+
+    <div class="cta-row">
+      <div class="floral-seal" aria-hidden="true">
+        <img src="images/flower.jpg" alt="" />
+      </div>
+
+      <div class="cta-buttons">
+        <a href="#rsvp" class="btn btn-primary">RSVP NOW</a>
+        <a href="#details" class="btn btn-ghost">VIEW DETAILS</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= DETAILS ================= -->
+<section id="details" class="section">
+  <h2 class="section-title">THE DETAILS</h2>
+
+  <div class="card">
+    <p class="label">DATE</p>
+    <h3>Friday</h3>
+    <p>October 23, 2026</p>
+  </div>
+
+  <div class="card">
+    <p class="label">CEREMONY</p>
+    <h3>6:00 PM</h3>
+    <p>Ceremony &amp; Reception to follow</p>
+  </div>
+</section>
+
+<!-- ================= VENUE ================= -->
+<section class="section">
+  <h2 class="section-title">VENUE</h2>
+
+  <div class="card">
+    <h3>Four Seasons Hotel Cairo<br />at Nile Plaza</h3>
+
+    <p class="muted">
+      1089 Corniche El Nil, Garden City<br />
+      Cairo 11519, Egypt
+    </p>
+
+    <p>
+      Perched on the banks of the Nile in the heart of Cairo,
+      the Four Seasons Nile Plaza is one of Egypt’s most iconic
+      luxury hotels — the perfect backdrop for our celebration.
+    </p>
+
+    <a href="https://maps.google.com" class="link">VIEW ON GOOGLE MAPS →</a>
+  </div>
+</section>
+
+<!-- ================= GETTING THERE ================= -->
+<section class="section">
+  <div class="card">
+    <h3>Getting There</h3>
+
+    <p class="label">FROM NEW YORK (JFK)</p>
+    <p>Direct flights with EgyptAir. ~11 hours.</p>
+
+    <p class="label">FROM GERMANY (FRA / MUC)</p>
+    <p>Direct flights with Lufthansa &amp; EgyptAir. ~5 hours.</p>
+
+    <p class="label">AIRPORT TO HOTEL</p>
+    <p>Private car service, taxis and ride-shares available.</p>
+
+    <p class="label">WHERE TO STAY</p>
+    <p>Beautiful Airbnbs are available all over the city— from leafy Maadi to Historic Downtown— offering a more local Cairo experience just minutes from the venue.</p>
+  </div>
+</section>
+
+<!-- ================= THE DAY ================= -->
+<section class="section">
+  <h2 class="section-title">THE DAY</h2>
+
+  <div class="timeline">
+    <div class="event">
+      <span class="time">5:30 PM</span>
+      <h4>Guests Arrive</h4>
+      <p>Welcome drinks and cocktails on arrival</p>
+    </div>
+
+    <div class="event">
+      <span class="time">6:00 PM</span>
+      <h4>Wedding Ceremony</h4>
+      <p>Please be seated before the hour</p>
+    </div>
+
+    <div class="event">
+      <span class="time">7:00 PM</span>
+      <h4>Entertainment</h4>
+      <p>Canapés &amp; sunset Nile views</p>
+    </div>
+
+    <div class="event">
+      <span class="time">9:00 PM</span>
+      <h4>Dinner Reception</h4>
+      <p>Dinner &amp; celebration</p>
+      </div>
+
+    <div class="event">
+      <span class="time">LATE EVENING</span>
+      <h4>More Entertainment</h4>
+      <p>DJ, saxophone, singing & dancing</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPLORE EGYPT ================= -->
+<section class="section">
+  <h2 class="section-title">EXPLORE EGYPT</h2>
+
+  <p class="center muted">
+    While you’re in Cairo, take time to explore one of history’s
+    greatest civilizations.
+  </p>
+
+  <div class="explore-card">
+    <img src="images/pyramids-sphinx.jpg" alt="Pyramids of Giza" />
+    <h3>Pyramids of Giza</h3>
+    <p>
+      Stand in awe before the last remaining wonder of the ancient world.
+    </p>
+  </div>
+
+  <div class="explore-card">
+    <img src="images/grand-egyptian-museum.jpg" alt="Grand Egyptian Museum" />
+    <h3>Grand Egyptian Museum</h3>
+    <p>
+      Home to over 100,000 artifacts including the treasures of Tutankhamun.
+    </p>
+  </div>
+
+  <div class="explore-card">
+    <img src="images/nile.jpg" alt="Downtown Cairo & Nile" />
+    <h3>Downtown Cairo &amp; the Nile</h3>
+    <p>
+      Belle Époque boulevards, historic cafés, and sunset river views.
+    </p>
+  </div>
+</section>
+
+<!-- ================= RSVP ================= -->
+<section id="rsvp" class="section rsvp">
+  <h2 class="section-title">RSVP</h2>
+
+  <div class="floral-seal center">
+    <img src="images/flower.jpg" alt="" />
+  </div>
+
+  <h3 class="center">Kindly Reply</h3>
+  <p class="center muted">
+    Please RSVP by <em>August 1, 2026</em>
+  </p>
+
+  <form class="rsvp-form">
+    <input type="text" placeholder="First Name *" required />
+    <input type="text" placeholder="Last Name *" required />
+    <input type="email" placeholder="Email Address *" required />
+    <select>
+      <option>Will you attend?</option>
+      <option>Yes</option>
+      <option>No</option>
+    </select>
+
+    <button type="submit" class="btn btn-primary">
+      SEND MY RSVP
+    </button>
+  </form>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="floral-seal">
+    <img src="images/flower.jpg" alt="" />
+  </div>
+
+  <p class="names-footer">Maggy &amp; Emre</p>
+  <p class="muted">October 23, 2026 · Cairo, Egypt</p>
+  <p class="soft">With love &amp; joy ✦</p>
+</footer>
 
 </body>
 </html>
