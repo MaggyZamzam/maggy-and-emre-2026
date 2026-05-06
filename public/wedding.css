@@ -129,7 +129,7 @@ nav a {
 }
 
 .hero h1 {
-  font-family: "Helvetica Neue", Arial, serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: clamp(86px, 16vw, 170px);
   line-height: 0.9;
   font-style: italic;
