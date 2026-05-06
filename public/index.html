@@ -3,30 +3,493 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maggy & Emre — October 23, 2026</title>
+  <meta name="theme-color" content="#f7f2ea" />
+  <title>Maggy &amp; Emre — October 23, 2026</title>
 
-  <!-- Fonts -->
+  <!-- Fonts (with safe fallbacks) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="wedding.css" />
+  <style>
+    :root{
+      --paper:#f7f2ea;          /* beige paper */
+      --paper-2:#fbf7f1;        /* card fill */
+      --ink:#1f1f1f;
+      --muted:#6f6a63;
+      --line:rgba(36,30,24,.16);
+      --line-2:rgba(36,30,24,.10);
+      --sage:#7d8f73;
+      --sage-2:#93a68b;
+      --radius:14px;
+      --shadow: 0 18px 40px rgba(25,25,25,.10), 0 6px 14px rgba(25,25,25,.06);
+      --max: 720px;
+      --pad: 22px;
+    }
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 700px at 50% -200px, rgba(255,255,255,.70), rgba(255,255,255,0) 60%),
+        var(--paper);
+      font-family: "Jost", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      line-height:1.55;
+      letter-spacing:.01em;
+    }
+    img{ max-width:100%; display:block; }
+
+    /* ---------- Header / Nav ---------- */
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background: rgba(247,242,234,.86);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line-2);
+    }
+    .header-inner{
+      max-width: var(--max);
+      margin:0 auto;
+      padding: 18px var(--pad);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .logo{
+      font-family:"Cormorant Garamond", serif;
+      font-weight:500;
+      letter-spacing:.08em;
+      font-size: 1.05rem;
+    }
+    .menu-btn{
+      border:0;
+      background:transparent;
+      font-size:1.4rem;
+      color:var(--ink);
+      padding:6px 8px;
+      cursor:pointer;
+    }
+    .nav{
+      max-width: var(--max);
+      margin:0 auto;
+      padding: 0 var(--pad) 14px;
+      display:none;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+    .nav a{
+      color:var(--muted);
+      text-decoration:none;
+      letter-spacing:.14em;
+      font-size:.75rem;
+      text-transform:uppercase;
+      padding:10px 0;
+    }
+    .nav a:hover{ color:var(--ink); }
+
+    .nav.open{ display:flex; }
+
+    /* ---------- Layout helpers ---------- */
+    .wrap{
+      max-width: var(--max);
+      margin:0 auto;
+      padding: 0 var(--pad);
+    }
+    .spacer-xl{ height: 44px; }
+    .spacer-lg{ height: 30px; }
+    .center{ text-align:center; }
+    .muted{ color:var(--muted); }
+
+    /* ---------- Fancy section title (like your screenshots) ---------- */
+    .section-title{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap: 14px;
+      margin: 34px 0 18px;
+      text-align:center;
+      font-family:"Cormorant Garamond", serif;
+      font-weight:500;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      font-size: .95rem;
+      color: var(--sage);
+    }
+    .section-title::before,
+    .section-title::after{
+      content:"";
+      height:1px;
+      flex:1;
+      background: var(--line);
+    }
+
+    /* ---------- Hero ---------- */
+    .hero{
+      padding: 34px 0 18px;
+    }
+    .hero-inner{
+      max-width: var(--max);
+      margin:0 auto;
+      padding: 0 var(--pad);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap: 10px;
+    }
+    .intro{
+      margin: 18px 0 4px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      font-size:.72rem;
+      color: var(--muted);
+    }
+    .names{
+      margin: 8px 0 10px;
+      font-family:"Cormorant Garamond", serif;
+      font-weight:500;
+      font-size: 3.1rem;
+      line-height:1.05;
+      text-align:center;
+    }
+    .hero-date{
+      margin: 14px 0 0;
+      font-family:"Cormorant Garamond", serif;
+      font-weight:600;
+      letter-spacing:.08em;
+      font-size: 2.2rem;
+    }
+    .hero-location{
+      margin: 6px 0 0;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      font-size:.78rem;
+      color: var(--muted);
+      text-align:center;
+    }
+
+    /* thin divider under header like reference */
+    .micro-divider{
+      width: 100%;
+      max-width: 520px;
+      margin: 18px auto 6px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      color: var(--sage-2);
+    }
+    .micro-divider::before,
+    .micro-divider::after{
+      content:"";
+      height:1px;
+      flex:1;
+      background: var(--line);
+      opacity:.7;
+    }
+    .micro-dot{
+      width:6px; height:6px;
+      border-radius:999px;
+      background: var(--sage-2);
+      opacity:.85;
+    }
+
+    /* ---------- 3D Flower Seal (your image unchanged) ---------- */
+    .floral-seal{
+      --seal-size: 112px;
+      width: var(--seal-size);
+      height: var(--seal-size);
+      border-radius: 999px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(40,40,40,0.08);
+      background: radial-gradient(circle at 30% 25%,
+        rgba(255,255,255,0.85) 0%,
+        rgba(255,255,255,0.40) 35%,
+        rgba(247,242,234,0.00) 70%
+      );
+      box-shadow:
+        0 18px 40px rgba(25, 25, 25, 0.12),
+        0 6px 14px rgba(25, 25, 25, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.85),
+        inset 0 -10px 18px rgba(0, 0, 0, 0.06);
+    }
+    .floral-seal img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transform: scale(1.08);
+    }
+    .floral-seal::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      border-radius:inherit;
+      background: radial-gradient(circle at 28% 24%,
+        rgba(255,255,255,0.70) 0%,
+        rgba(255,255,255,0.18) 28%,
+        rgba(255,255,255,0.00) 52%
+      );
+      pointer-events:none;
+    }
+    .floral-seal::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      border-radius:inherit;
+      box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.55),
+        inset 0 -22px 26px rgba(0,0,0,0.08);
+      pointer-events:none;
+    }
+    .seal-center{
+      display:flex;
+      justify-content:center;
+      margin: 14px 0 12px;
+    }
+
+    /* ---------- CTA row ---------- */
+    .cta-row{
+      display:flex;
+      align-items:center;
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .cta-buttons{
+      display:grid;
+      gap: 10px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      height: 46px;
+      width: 220px;
+      padding: 0 22px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.76rem;
+      text-decoration:none;
+      border-radius: 0; /* matches editorial style */
+    }
+    .btn-primary{
+      background: var(--sage);
+      border: 1px solid var(--sage);
+      color:#fff;
+      box-shadow: 0 10px 26px rgba(125,143,115,.22);
+    }
+    .btn-ghost{
+      background: transparent;
+      border: 1px solid rgba(60,60,60,0.20);
+      color: var(--muted);
+    }
+    .btn-primary:hover{ filter: brightness(0.98); }
+    .btn-ghost:hover{ border-color: rgba(60,60,60,0.30); color: var(--ink); }
+
+    /* ---------- Cards ---------- */
+    .section{ padding: 14px 0 6px; }
+    .card{
+      background: var(--paper-2);
+      border: 1px solid var(--line-2);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 26px rgba(0,0,0,.05);
+      padding: 22px;
+      margin: 14px 0;
+    }
+    .label{
+      margin: 0 0 6px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      font-size:.72rem;
+      color: var(--sage);
+    }
+    h3{
+      font-family:"Cormorant Garamond", serif;
+      font-weight:600;
+      font-size: 1.9rem;
+      margin: 0 0 8px;
+      letter-spacing:.01em;
+    }
+    h4{
+      font-family:"Cormorant Garamond", serif;
+      font-weight:600;
+      margin: 0 0 4px;
+      font-size: 1.45rem;
+    }
+    p{ margin: 0 0 10px; }
+    .link{
+      display:inline-flex;
+      gap: 8px;
+      align-items:center;
+      margin-top: 8px;
+      text-decoration:none;
+      color: var(--sage);
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      font-size:.75rem;
+    }
+    .link:hover{ color: var(--ink); }
+
+    /* ---------- Timeline (The Day) ---------- */
+    .timeline{
+      margin: 8px 0 10px;
+      border-left: 2px solid rgba(125,143,115,.25);
+      padding-left: 16px;
+    }
+    .event{
+      position:relative;
+      padding: 10px 0 12px 10px;
+    }
+    .event::before{
+      content:"";
+      position:absolute;
+      left:-22px;
+      top: 16px;
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--sage);
+      box-shadow: 0 0 0 6px rgba(125,143,115,.14);
+    }
+    .time{
+      display:inline-block;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      font-size:.72rem;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    /* ---------- Explore Egypt cards (image + fade overlay + text) ---------- */
+    .explore-card{
+      background: var(--paper-2);
+      border: 1px solid var(--line-2);
+      border-radius: var(--radius);
+      overflow:hidden;
+      box-shadow: 0 12px 30px rgba(0,0,0,.07);
+      margin: 18px 0;
+    }
+    .explore-media{
+      position:relative;
+      height: 290px;
+      overflow:hidden;
+      background: #ddd;
+    }
+    .explore-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+
+      /* fade the image a little, elegant */
+      opacity: 0.92;
+      filter: saturate(0.92) contrast(0.96) brightness(0.98);
+      transform: scale(1.02);
+    }
+    .explore-media::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,.22), rgba(0,0,0,0) 55%),
+        radial-gradient(700px 260px at 30% 20%, rgba(255,255,255,.12), rgba(255,255,255,0) 60%);
+      pointer-events:none;
+    }
+    .explore-kicker{
+      position:absolute;
+      left: 14px;
+      bottom: 14px;
+      right: 14px;
+      color: rgba(255,255,255,.92);
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      font-size:.72rem;
+      text-shadow: 0 8px 24px rgba(0,0,0,.35);
+    }
+    .explore-body{
+      padding: 18px 20px 14px;
+    }
+
+    /* ---------- RSVP form styling (looks like screenshot) ---------- */
+    .rsvp-form{
+      display:grid;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    input, select, button, textarea{
+      font: inherit;
+    }
+    input, select, textarea{
+      width:100%;
+      padding: 14px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(60,60,60,.20);
+      background: rgba(255,255,255,.55);
+      outline: none;
+    }
+    input:focus, select:focus, textarea:focus{
+      border-color: rgba(125,143,115,.55);
+      box-shadow: 0 0 0 4px rgba(125,143,115,.14);
+    }
+    .rsvp .btn{
+      width: 100%;
+      height: 54px;
+      border-radius: 0;
+    }
+
+    /* ---------- Footer ---------- */
+    .site-footer{
+      padding: 34px var(--pad) 48px;
+      text-align:center;
+      color: var(--muted);
+    }
+    .names-footer{
+      font-family:"Cormorant Garamond", serif;
+      font-weight:600;
+      font-size: 2.0rem;
+      margin: 10px 0 4px;
+      color: var(--ink);
+    }
+    .soft{
+      letter-spacing:.12em;
+      color: rgba(111,106,99,.75);
+      margin-top: 10px;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 520px){
+      .names{ font-size: 2.6rem; }
+      .hero-date{ font-size: 2.0rem; }
+      .cta-row{ align-items:flex-start; }
+      .btn{ width: 210px; }
+      .floral-seal{ --seal-size: 96px; }
+      .explore-media{ height: 260px; }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="header-inner">
     <div class="logo">M &amp; E</div>
-    <div class="menu">☰</div>
+    <button class="menu-btn" type="button" aria-label="Menu" aria-controls="site-nav" aria-expanded="false">☰</button>
   </div>
+  <nav id="site-nav" class="nav" aria-label="Site navigation">
+    <a href="#details">Details</a>
+    <a href="#venue">Venue</a>
+    <a href="#travel">Getting There</a>
+    <a href="#day">The Day</a>
+    <a href="#explore">Explore Egypt</a>
+    <a href="#rsvp">RSVP</a>
+  </nav>
 </header>
 
-<!-- ================= HERO ================= -->
 <section class="hero">
   <div class="hero-inner">
+
+    <div class="micro-divider"><span class="micro-dot"></span></div>
 
     <p class="intro">PLEASE JOIN US FOR THE WEDDING OF</p>
 
@@ -50,177 +513,231 @@
       </div>
     </div>
 
+    <div class="spacer-lg"></div>
   </div>
 </section>
 
-<!-- ================= DETAILS ================= -->
-<section id="details" class="section">
-  <h2 class="section-title">THE DETAILS</h2>
+<div class="wrap">
 
-  <div class="card">
-    <p class="label">DATE</p>
-    <h3>Friday</h3>
-    <p>October 23, 2026</p>
-  </div>
+  <!-- ================= DETAILS ================= -->
+  <section id="details" class="section">
+    <div class="section-title">THE DETAILS</div>
 
-  <div class="card">
-    <p class="label">CEREMONY</p>
-    <h3>6:00 PM</h3>
-    <p>Ceremony &amp; Reception to follow</p>
-  </div>
-</section>
-
-<!-- ================= VENUE ================= -->
-<section class="section">
-  <h2 class="section-title">VENUE</h2>
-
-  <div class="card">
-    <h3>Four Seasons Hotel Cairo<br />at Nile Plaza</h3>
-
-    <p class="muted">
-      1089 Corniche El Nil, Garden City<br />
-      Cairo 11519, Egypt
-    </p>
-
-    <p>
-      Perched on the banks of the Nile in the heart of Cairo,
-      the Four Seasons Nile Plaza is one of Egypt’s most iconic
-      luxury hotels — the perfect backdrop for our celebration.
-    </p>
-
-    <a href="https://maps.google.com" class="link">VIEW ON GOOGLE MAPS →</a>
-  </div>
-</section>
-
-<!-- ================= GETTING THERE ================= -->
-<section class="section">
-  <div class="card">
-    <h3>Getting There</h3>
-
-    <p class="label">FROM NEW YORK (JFK)</p>
-    <p>Direct flights with EgyptAir. ~11 hours.</p>
-
-    <p class="label">FROM GERMANY (FRA / MUC)</p>
-    <p>Direct flights with Lufthansa &amp; EgyptAir. ~5 hours.</p>
-
-    <p class="label">AIRPORT TO HOTEL</p>
-    <p>Private car service, taxis and ride-shares available.</p>
-
-    <p class="label">WHERE TO STAY</p>
-    <p>Beautiful Airbnbs are available all over the city— from leafy Maadi to Historic Downtown— offering a more local Cairo experience just minutes from the venue.</p>
-  </div>
-</section>
-
-<!-- ================= THE DAY ================= -->
-<section class="section">
-  <h2 class="section-title">THE DAY</h2>
-
-  <div class="timeline">
-    <div class="event">
-      <span class="time">5:30 PM</span>
-      <h4>Guests Arrive</h4>
-      <p>Welcome drinks and cocktails on arrival</p>
+    <div class="card">
+      <p class="label">DATE</p>
+      <h3>Friday</h3>
+      <p>October 23, 2026</p>
     </div>
 
-    <div class="event">
-      <span class="time">6:00 PM</span>
-      <h4>Wedding Ceremony</h4>
-      <p>Please be seated before the hour</p>
+    <div class="card">
+      <p class="label">CEREMONY</p>
+      <h3>6:00 PM</h3>
+      <p>Ceremony &amp; Reception to follow</p>
     </div>
+  </section>
 
-    <div class="event">
-      <span class="time">7:00 PM</span>
-      <h4>Entertainment</h4>
-      <p>Canapés &amp; sunset Nile views</p>
+  <!-- ================= VENUE ================= -->
+  <section id="venue" class="section">
+    <div class="section-title">VENUE</div>
+
+    <div class="card">
+      <h3>Four Seasons Hotel Cairo<br />at Nile Plaza</h3>
+
+      <p class="muted">
+        1089 Corniche El Nil, Garden City<br />
+        Cairo 11519, Egypt
+      </p>
+
+      <p>
+        Perched on the banks of the Nile in the heart of Cairo,
+        the Four Seasons Nile Plaza is one of Egypt’s most iconic
+        luxury hotels — the perfect backdrop for our celebration.
+      </p>
+
+      <!-- A solid venue link (search-based), not a generic maps homepage -->
+      <a class="link" href="https://www.google.com/maps/search/?api=1&query=Four%20Seasons%20Hotel%20Cairo%20at%20Nile%20Plaza%201089%20Corniche%20El%20Nil%20Garden%20City%20Cairo%2011519" target="_blank" rel="noopener">
+        VIEW ON GOOGLE MAPS →
+      </a>
     </div>
+  </section>
 
-    <div class="event">
-      <span class="time">9:00 PM</span>
-      <h4>Dinner Reception</h4>
-      <p>Dinner &amp; celebration</p>
+  <!-- ================= GETTING THERE ================= -->
+  <section id="travel" class="section">
+    <div class="card">
+      <h3>Getting There</h3>
+
+      <p class="label">FROM NEW YORK (JFK)</p>
+      <p>Direct flights with EgyptAir. ~11 hours.</p>
+
+      <p class="label">FROM GERMANY (FRA / MUC)</p>
+      <p>Direct flights with Lufthansa &amp; EgyptAir. ~5 hours. A quick and easy journey.</p>
+
+      <p class="label">AIRPORT TO HOTEL</p>
+      <p>The Four Seasons offers a private car service. Alternatively, taxis and ride-shares are plentiful.</p>
+
+      <p class="label">WHERE TO STAY</p>
+      <p>Beautiful Airbnbs are available all over the city — from leafy Zamalek to historic Downtown — offering a more local Cairo experience just minutes from the venue.</p>
+    </div>
+  </section>
+
+  <!-- ================= THE DAY ================= -->
+  <section id="day" class="section">
+    <div class="section-title">THE DAY</div>
+
+    <div class="timeline">
+      <div class="event">
+        <div class="time">5:30 PM</div>
+        <h4>Guests Arrive</h4>
+        <p>Welcome drinks and cocktails on arrival</p>
       </div>
 
-    <div class="event">
-      <span class="time">LATE EVENING</span>
-      <h4>More Entertainment</h4>
-      <p>DJ, saxophone, singing & dancing</p>
+      <div class="event">
+        <div class="time">6:00 PM</div>
+        <h4>Wedding Ceremony</h4>
+        <p>Please be seated before the hour</p>
+      </div>
+
+      <div class="event">
+        <div class="time">7:00 PM</div>
+        <h4>Entertainment</h4>
+        <p>Canapés &amp; sunset Nile views</p>
+      </div>
+
+      <div class="event">
+        <div class="time">9:00 PM</div>
+        <h4>Dinner Reception</h4>
+        <p>Dinner &amp; celebration</p>
+      </div>
+
+      <div class="event">
+        <div class="time">LATE EVENING</div>
+        <h4>More Entertainment</h4>
+        <p>DJ, saxophone, singing &amp; dancing</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPLORE EGYPT ================= -->
+  <section id="explore" class="section">
+    <div class="section-title">EXPLORE EGYPT</div>
+
+    <p class="center muted">
+      While you’re in Cairo, take time to explore one of history’s
+      greatest civilizations.
+    </p>
+
+    <div class="explore-card">
+      <div class="explore-media">
+        <img src="images/pyramids-sphinx.jpg" alt="Pyramids of Giza" />
+        <div class="explore-kicker">ANCIENT WONDER OF THE WORLD</div>
+      </div>
+      <div class="explore-body">
+        <h3>Pyramids of Giza</h3>
+        <p>Stand in awe before the last remaining wonder of the ancient world. The Great Pyramid of Khufu — 4,500 years old — rises from the desert just 30 minutes from the Four Seasons. And don't forget to ride a camel — it's a Cairo rite of passage.</p>
+        <a class="link" href="#" onclick="return false;">EXPLORE →</a>
+      </div>
+    </div>
+
+    <div class="explore-card">
+      <div class="explore-media">
+        <img src="images/grand-egyptian-museum.jpg" alt="Grand Egyptian Museum" />
+        <div class="explore-kicker">THE WORLD'S LARGEST ARCHAEOLOGICAL MUSEUM</div>
+      </div>
+      <div class="explore-body">
+        <h3>Grand Egyptian Museum</h3>
+        <p>Opened in 2023, the GEM houses over 100,000 artifacts including the complete, unseen treasures of Tutankhamun. The dramatic glass-and-stone façade overlooks the Pyramids themselves — and at night, the experience is bathed in golden light.</p>
+        <a class="link" href="#" onclick="return false;">EXPLORE →</a>
+      </div>
+    </div>
+
+    <div class="explore-card">
+      <div class="explore-media">
+        <img src="images/nile.jpg" alt="Downtown Cairo & the Nile" />
+        <div class="explore-kicker">BELLE ÉPOQUE, KHAN EL-KHALILI &amp; RIVER VIEWS</div>
+      </div>
+      <div class="explore-body">
+        <h3>Downtown Cairo &amp; the Nile</h3>
+        <p>Wander through Khedivial Cairo's grand Belle Époque boulevards, then lose yourself in the labyrinthine alleys of Khan el-Khalili bazaar. Sip mint tea at El-Fishawy Café — Cairo's oldest coffeehouse, open since 1797 — and end the day with sunset over the Nile.</p>
+        <a class="link" href="#" onclick="return false;">EXPLORE →</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ================= RSVP ================= -->
+  <section id="rsvp" class="section rsvp">
+    <div class="section-title">RSVP</div>
+
+    <div class="seal-center">
+      <div class="floral-seal" aria-hidden="true">
+        <img src="images/flower.jpg" alt="" />
+      </div>
+    </div>
+
+    <h3 class="center">Kindly Reply</h3>
+    <p class="center muted">Please RSVP by <em>August 1, 2026</em>. We look forward to celebrating with you in the heart of Cairo.</p>
+
+    <div class="card">
+      <form class="rsvp-form">
+        <input type="text" placeholder="FIRST NAME *" required />
+        <input type="text" placeholder="LAST NAME *" required />
+        <input type="email" placeholder="EMAIL ADDRESS *" required />
+        <input type="tel" placeholder="PHONE NUMBER" />
+        <select>
+          <option>WILL YOU ATTEND? *</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+        <select>
+          <option>NUMBER OF GUESTS</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+        <select>
+          <option>TRAVELING FROM</option>
+          <option>New York (JFK)</option>
+          <option>Germany (FRA / MUC)</option>
+          <option>Other</option>
+        </select>
+        <textarea rows="4" placeholder="A NOTE FOR THE COUPLE"></textarea>
+
+        <button type="submit" class="btn btn-primary">SEND MY RSVP</button>
+      </form>
+    </div>
+  </section>
+
+  <div class="spacer-xl"></div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="seal-center">
+    <div class="floral-seal" aria-hidden="true">
+      <img src="images/flower.jpg" alt="" />
     </div>
   </div>
-</section>
 
-<!-- ================= EXPLORE EGYPT ================= -->
-<section class="section">
-  <h2 class="section-title">EXPLORE EGYPT</h2>
-
-  <p class="center muted">
-    While you’re in Cairo, take time to explore one of history’s
-    greatest civilizations.
-  </p>
-
-  <div class="explore-card">
-    <img src="images/pyramids-sphinx.jpg" alt="Pyramids of Giza" />
-    <h3>Pyramids of Giza</h3>
-    <p>
-      Stand in awe before the last remaining wonder of the ancient world.
-    </p>
-  </div>
-
-  <div class="explore-card">
-    <img src="images/grand-egyptian-museum.jpg" alt="Grand Egyptian Museum" />
-    <h3>Grand Egyptian Museum</h3>
-    <p>
-      Home to over 100,000 artifacts including the treasures of Tutankhamun.
-    </p>
-  </div>
-
-  <div class="explore-card">
-    <img src="images/nile.jpg" alt="Downtown Cairo & Nile" />
-    <h3>Downtown Cairo &amp; the Nile</h3>
-    <p>
-      Belle Époque boulevards, historic cafés, and sunset river views.
-    </p>
-  </div>
-</section>
-
-<!-- ================= RSVP ================= -->
-<section id="rsvp" class="section rsvp">
-  <h2 class="section-title">RSVP</h2>
-
-  <div class="floral-seal center">
-    <img src="images/flower.jpg" alt="" />
-  </div>
-
-  <h3 class="center">Kindly Reply</h3>
-  <p class="center muted">
-    Please RSVP by <em>August 1, 2026</em>
-  </p>
-
-  <form class="rsvp-form">
-    <input type="text" placeholder="First Name *" required />
-    <input type="text" placeholder="Last Name *" required />
-    <input type="email" placeholder="Email Address *" required />
-    <select>
-      <option>Will you attend?</option>
-      <option>Yes</option>
-      <option>No</option>
-    </select>
-
-    <button type="submit" class="btn btn-primary">
-      SEND MY RSVP
-    </button>
-  </form>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer class="site-footer">
-  <div class="floral-seal">
-    <img src="images/flower.jpg" alt="" />
-  </div>
-
-  <p class="names-footer">Maggy &amp; Emre</p>
-  <p class="muted">October 23, 2026 · Cairo, Egypt</p>
-  <p class="soft">With love &amp; joy ✦</p>
+  <div class="names-footer">Maggy &amp; Emre</div>
+  <div class="muted">October 23, 2026 · Cairo, Egypt</div>
+  <div class="soft">With love &amp; joy ✦</div>
 </footer>
+
+<script>
+  // Simple bulletproof menu toggle (no dependencies)
+  const btn = document.querySelector('.menu-btn');
+  const nav = document.querySelector('#site-nav');
+  btn.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(isOpen));
+  });
+  // close menu after click
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  }));
+</script>
 
 </body>
 </html>
