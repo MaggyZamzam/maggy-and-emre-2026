@@ -1,4 +1,4 @@
-:root { 
+:root {
   --cream: #f7f2e9;
   --paper: #fffdfa;
   --text: #292725;
@@ -80,7 +80,7 @@ nav a {
 
 .hero-flower-wrap {
   position: absolute;
-  top: 135px;
+  top: 95px;
   left: 50%;
   transform: translateX(-50%);
   width: min(720px, 95vw);
@@ -103,12 +103,12 @@ nav a {
 
 .hero-flower-left {
   left: 45px;
-  top: 20px;
+  top: 0;
 }
 
 .hero-flower-right {
   right: 45px;
-  top: 20px;
+  top: 0;
 }
 
 .eyebrow,
@@ -282,6 +282,10 @@ footer h2 {
   margin: 15px 0;
 }
 
+.rsvp-section h2 {
+  color: var(--rose);
+}
+
 .place-card h3 {
   font-size: clamp(30px, 5vw, 42px);
   margin: 16px 0;
@@ -295,18 +299,18 @@ footer h2 {
 .info-card p,
 .timeline-item span,
 .rsvp-note {
-  font-size: 19px;
+  font-size: 17px;
   color: var(--muted);
 }
 
 .place-card p {
-  font-size: 16px;
+  font-size: 15px;
   color: var(--muted);
   line-height: 1.75;
 }
 
 .venue-card p {
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .info-card {
@@ -326,7 +330,8 @@ footer h2 {
 }
 
 .travel-card p {
-  font-size: 17px;
+  font-size: 15px;
+  line-height: 1.65;
 }
 
 .text-link,
@@ -429,8 +434,8 @@ footer h2 {
   background: none;
   position: static;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 7px;
+  letter-spacing: 1.5px;
+  font-size: 6px;
   font-style: italic;
   font-family: "Cormorant Garamond", serif;
   font-weight: 700;
@@ -442,7 +447,7 @@ footer h2 {
   color: #60745c;
   padding: 16px 18px;
   margin: 24px 0 8px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .rsvp-section {
@@ -452,52 +457,54 @@ footer h2 {
 .rsvp-note em {
   color: var(--sage);
   font-family: "Cormorant Garamond", serif;
-  font-size: 30px;
+  font-size: 27px;
 }
 
 .rsvp-form {
-  max-width: 900px;
-  margin: 70px auto 0;
+  max-width: 820px;
+  margin: 55px auto 0;
   background: rgba(255, 253, 250, 0.75);
   border: 1px solid var(--border);
-  padding: 65px;
+  padding: 42px 48px;
   text-align: left;
 }
 
 .rsvp-form label {
   display: block;
-  margin: 28px 0 10px;
+  margin: 20px 0 7px;
+  font-size: 12px;
+  letter-spacing: 5px;
 }
 
 input,
 select,
 textarea {
   width: 100%;
-  padding: 23px;
+  padding: 16px 18px;
   border: 1px solid var(--border);
   background: white;
   color: var(--text);
   font-family: "Montserrat", sans-serif;
-  font-size: 20px;
+  font-size: 17px;
   border-radius: 6px;
 }
 
 textarea {
-  height: 150px;
+  height: 115px;
   resize: vertical;
 }
 
 button[type="submit"] {
   display: block;
-  width: 80%;
-  margin: 55px auto 0;
-  padding: 24px;
+  width: 75%;
+  margin: 42px auto 0;
+  padding: 19px;
   background: var(--sage);
   color: white;
   border: 0;
   text-transform: uppercase;
-  letter-spacing: 7px;
-  font-size: 18px;
+  letter-spacing: 6px;
+  font-size: 16px;
   cursor: pointer;
 }
 
@@ -554,7 +561,7 @@ footer span {
   }
 
   .hero-flower-wrap {
-    top: 140px;
+    top: 100px;
     width: 100vw;
     height: 300px;
   }
@@ -566,12 +573,12 @@ footer span {
 
   .hero-flower-left {
     left: 10px;
-    top: 20px;
+    top: 0;
   }
 
   .hero-flower-right {
     right: 10px;
-    top: 20px;
+    top: 0;
   }
 
   .eyebrow,
@@ -628,9 +635,12 @@ footer span {
     font-size: 17px;
   }
 
-  .info-card,
-  .rsvp-form {
+  .info-card {
     padding: 38px 32px;
+  }
+
+  .rsvp-form {
+    padding: 32px 26px;
   }
 
   .info-card h4 {
@@ -641,10 +651,16 @@ footer span {
   .info-card p,
   .timeline-item span,
   .rsvp-note,
-  .intro p,
-  .travel-card p,
   .venue-card p {
-    font-size: 17px;
+    font-size: 15px;
+  }
+
+  .intro p {
+    font-size: 22px;
+  }
+
+  .travel-card p {
+    font-size: 14px;
   }
 
   .place-card p {
@@ -672,12 +688,23 @@ footer span {
   }
 
   .photo-label {
-    font-size: 7px;
-    letter-spacing: 1.5px;
+    font-size: 6px;
+    letter-spacing: 1px;
   }
 
   .place-card em {
-    font-size: 14px;
+    font-size: 13px;
+  }
+
+  input,
+  select,
+  textarea {
+    padding: 14px 15px;
+    font-size: 16px;
+  }
+
+  textarea {
+    height: 105px;
   }
 
   button[type="submit"] {
