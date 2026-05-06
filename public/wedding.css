@@ -98,7 +98,7 @@ nav a {
   border-radius: 0;
   box-shadow: none;
   mix-blend-mode: multiply;
-  filter: blur(0.4px);
+  filter: blur(0.2px);
 }
 
 .hero-flower-left {
