@@ -361,6 +361,7 @@ footer h2 {
   max-width: 900px;
   margin: auto;
   padding-left: 55px;
+  border-left: 2px solid var (--border);
   position: realtive;
 }
 
