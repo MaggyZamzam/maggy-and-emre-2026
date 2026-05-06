@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap');
+
+body {
+  margin: 0;
+  background: #f7f3ee;
+  font-family: 'Jost', sans-serif;
+  color: #1f1f1f;
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 4rem;
+  background: url('images/olive-tree.png') no-repeat right top;
+  background-size: 420px auto;
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  margin: 1.5rem 0;
+}
+
+.intro {
+  letter-spacing: 0.15em;
+  font-size: 0.85rem;
+}
+
+.date, .location {
+  margin-top: 1rem;
+}
+
+.gallery {
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+}
