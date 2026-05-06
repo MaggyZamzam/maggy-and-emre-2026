@@ -1,4 +1,4 @@
-:root {
+:root { 
   --cream: #f7f2e9;
   --paper: #fffdfa;
   --text: #292725;
@@ -7,7 +7,6 @@
   --soft-pink: #d8c1c2;
   --rose: #8b5f62;
   --border: #ded5cc;
-  --dark-beige: #9b8f83;
 }
 
 * {
@@ -79,6 +78,39 @@ nav a {
   overflow: hidden;
 }
 
+.hero-flower-wrap {
+  position: absolute;
+  top: 135px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(720px, 95vw);
+  height: 360px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.flower {
+  position: absolute;
+  width: 330px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.18;
+  border-radius: 0;
+  box-shadow: none;
+  mix-blend-mode: multiply;
+  filter: blur(0.4px);
+}
+
+.hero-flower-left {
+  left: 45px;
+  top: 20px;
+}
+
+.hero-flower-right {
+  right: 45px;
+  top: 20px;
+}
+
 .eyebrow,
 .location,
 .label,
@@ -113,6 +145,15 @@ nav a {
   font-size: 48px;
   letter-spacing: 8px;
   margin-top: 70px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero .eyebrow,
+.hero .location,
+.divider {
+  position: relative;
+  z-index: 2;
 }
 
 .divider,
@@ -120,7 +161,7 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 22px;
 }
 
 .divider::before,
@@ -137,29 +178,6 @@ nav a {
   height: 7px;
   background: var(--sage);
   border-radius: 50%;
-}
-
-.flower {
-  width: 260px;
-  height: auto;
-  object-fit: contain;
-  opacity: 0.22;
-  position: absolute;
-  border-radius: 0;
-  box-shadow: none;
-  filter: blur(0.2px);
-  mix-blend-mode: multiply;
-  z-index: 1;
-}
-
-.flower-top {
-  right: 4%;
-  top: 45px;
-}
-
-.flower-bottom {
-  left: 1%;
-  bottom: 105px;
 }
 
 .hero-buttons {
@@ -192,12 +210,12 @@ nav a {
 }
 
 .section {
-  padding: 110px 7%;
+  padding: 100px 7%;
   border-top: 1px solid var(--border);
 }
 
 .section-title {
-  margin-bottom: 70px;
+  margin-bottom: 60px;
   flex-wrap: nowrap;
 }
 
@@ -205,16 +223,16 @@ nav a {
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
   color: var(--sage);
-  font-size: clamp(38px, 6vw, 58px);
+  font-size: clamp(31px, 5vw, 46px);
   font-weight: 700;
-  letter-spacing: 8px;
+  letter-spacing: 6px;
   text-transform: uppercase;
   white-space: nowrap;
   margin: 0;
 }
 
 .details-card {
-  max-width: 980px;
+  max-width: 880px;
   margin: auto;
   background: var(--paper);
   border: 1px solid var(--border);
@@ -222,7 +240,7 @@ nav a {
 
 .detail-box {
   text-align: center;
-  padding: 65px 40px;
+  padding: 42px 35px;
   border-bottom: 1px solid var(--border);
 }
 
@@ -231,13 +249,14 @@ nav a {
 }
 
 .icon {
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: 28px;
+  margin-bottom: 12px;
 }
 
 .label {
-  color: var(--sage);
+  color: var(--rose);
   font-weight: 600;
+  margin: 5px 0;
 }
 
 .detail-accent {
@@ -251,8 +270,8 @@ h3 {
 }
 
 .detail-box h3 {
-  font-size: clamp(36px, 6vw, 52px);
-  margin: 15px 0;
+  font-size: clamp(32px, 5vw, 46px);
+  margin: 10px 0;
 }
 
 .info-card h2,
@@ -264,21 +283,26 @@ footer h2 {
 }
 
 .place-card h3 {
-  font-size: clamp(32px, 5vw, 46px);
-  margin: 18px 0;
+  font-size: clamp(30px, 5vw, 42px);
+  margin: 16px 0;
 }
 
 .detail-box p {
-  font-size: 22px;
+  font-size: 19px;
   color: var(--muted);
 }
 
 .info-card p,
-.place-card p,
 .timeline-item span,
 .rsvp-note {
   font-size: 19px;
   color: var(--muted);
+}
+
+.place-card p {
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.75;
 }
 
 .venue-card p {
@@ -394,19 +418,19 @@ footer h2 {
 }
 
 .place-content {
-  padding: 30px 28px 20px;
+  padding: 24px 28px 18px;
 }
 
 .photo-label {
-  color: var(--sage);
+  color: var(--rose);
   display: block;
-  margin: 8px 0 18px;
+  margin: 4px 0 14px;
   padding: 0;
   background: none;
   position: static;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 11px;
+  letter-spacing: 2px;
+  font-size: 7px;
   font-style: italic;
   font-family: "Cormorant Garamond", serif;
   font-weight: 700;
@@ -416,24 +440,13 @@ footer h2 {
   display: block;
   background: #f0f3ed;
   color: #60745c;
-  padding: 18px 20px;
-  margin: 28px 0 8px;
-  font-size: 17px;
+  padding: 16px 18px;
+  margin: 24px 0 8px;
+  font-size: 15px;
 }
 
 .rsvp-section {
   text-align: center;
-}
-
-.rsvp-flower {
-  width: 155px;
-  height: auto;
-  object-fit: contain;
-  margin-bottom: 30px;
-  opacity: 0.35;
-  border-radius: 0;
-  box-shadow: none;
-  mix-blend-mode: multiply;
 }
 
 .rsvp-note em {
@@ -494,18 +507,8 @@ button[type="submit"] {
 
 footer {
   text-align: center;
-  padding: 100px 7%;
+  padding: 90px 7%;
   border-top: 1px solid var(--border);
-}
-
-footer img {
-  width: 130px;
-  height: auto;
-  object-fit: contain;
-  opacity: 0.35;
-  border-radius: 0;
-  box-shadow: none;
-  mix-blend-mode: multiply;
 }
 
 footer p {
@@ -550,6 +553,27 @@ footer span {
     padding-top: 70px;
   }
 
+  .hero-flower-wrap {
+    top: 140px;
+    width: 100vw;
+    height: 300px;
+  }
+
+  .flower {
+    width: 220px;
+    opacity: 0.18;
+  }
+
+  .hero-flower-left {
+    left: 10px;
+    top: 20px;
+  }
+
+  .hero-flower-right {
+    right: 10px;
+    top: 20px;
+  }
+
   .eyebrow,
   .location,
   .label,
@@ -567,21 +591,6 @@ footer span {
     font-size: 36px;
   }
 
-  .flower {
-    width: 190px;
-    opacity: 0.22;
-  }
-
-  .flower-top {
-    right: -45px;
-    top: 85px;
-  }
-
-  .flower-bottom {
-    left: -45px;
-    bottom: 150px;
-  }
-
   .hero-buttons {
     flex-direction: column;
     align-items: center;
@@ -593,22 +602,30 @@ footer span {
   }
 
   .section {
-    padding: 90px 6%;
+    padding: 85px 6%;
   }
 
   .section-title {
-    gap: 14px;
+    gap: 12px;
   }
 
   .section-title p {
-    font-size: 32px;
-    letter-spacing: 4px;
+    font-size: 26px;
+    letter-spacing: 3px;
   }
 
   .divider::before,
   .divider::after,
   .section-title span {
-    width: 70px;
+    width: 75px;
+  }
+
+  .detail-box {
+    padding: 34px 28px;
+  }
+
+  .detail-box p {
+    font-size: 17px;
   }
 
   .info-card,
@@ -622,7 +639,6 @@ footer span {
   }
 
   .info-card p,
-  .place-card p,
   .timeline-item span,
   .rsvp-note,
   .intro p,
@@ -631,8 +647,8 @@ footer span {
     font-size: 17px;
   }
 
-  .detail-box p {
-    font-size: 19px;
+  .place-card p {
+    font-size: 14px;
   }
 
   .timeline-item h3 {
@@ -652,16 +668,16 @@ footer span {
   }
 
   .place-content {
-    padding: 24px 18px 14px;
+    padding: 20px 18px 14px;
   }
 
   .photo-label {
-    font-size: 10px;
-    letter-spacing: 2px;
+    font-size: 7px;
+    letter-spacing: 1.5px;
   }
 
   .place-card em {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   button[type="submit"] {
