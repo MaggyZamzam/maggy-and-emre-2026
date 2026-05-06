@@ -7,7 +7,7 @@
   <title>Maggy &amp; Emre — October 23, 2026</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  https://fonts.gstatic.com
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="wedding.css" />
@@ -20,20 +20,19 @@
     <div class="logo">M &amp; E</div>
     <button class="menu-btn" type="button" aria-label="Menu" aria-controls="site-nav" aria-expanded="false">☰</button>
   </div>
+
   <nav id="site-nav" class="nav" aria-label="Site navigation">
-    <a href="#details">Details</a>
-    <a href="#venue">Venue</a>
-    <a href="#travel">Getting There</a>
-    <a href="#day">The Day</a>
-    <a href="#explore">Explore Egypt</a>
+    <a href="#details">THE DETAILS</a>
+    <a href="#venue">VENUE</a>
+    <a href="#travel">GETTING THERE</a>
+    <a href="#day">THE DAY</a>
+    <a href="#explore">EXPLORE EGYPT</a>
     <a href="#rsvp">RSVP</a>
   </nav>
 </header>
 
 <!-- ================= HERO ================= -->
-<section class="hero floral floral--right">
-  <img class="floral-img" src="images/flower.jpg" alt="" aria-hidden="true" />
-
+<section class="hero section floral floral--right">
   <div class="hero-inner">
     <div class="micro-divider"><span class="micro-dot"></span></div>
 
@@ -44,20 +43,16 @@
     </h1>
 
     <p class="hero-date">10.23.2026</p>
-    <p class="hero-location">
-      FOUR SEASONS HOTEL CAIRO AT NILE PLAZA
-    </p>
+    <p class="hero-location">FOUR SEASONS HOTEL CAIRO AT NILE PLAZA</p>
 
-    <div class="cta-row">
-      <div class="cta-buttons">
-        <a href="#rsvp" class="btn btn-primary">RSVP NOW</a>
-        <a href="#details" class="btn btn-ghost">VIEW DETAILS</a>
-      </div>
+    <div class="cta-buttons">
+      <a class="btn btn-primary" href="#rsvp">RSVP NOW</a>
+      <a class="btn btn-ghost" href="#details">VIEW DETAILS</a>
     </div>
   </div>
 </section>
 
-<div class="wrap">
+<main class="wrap">
 
   <!-- ================= DETAILS ================= -->
   <section id="details" class="section">
@@ -65,6 +60,7 @@
 
     <div class="panel">
       <div class="panel-item">
+        <div class="icon">📅</div>
         <p class="label">DATE</p>
         <h3>Friday</h3>
         <p>October 23, 2026</p>
@@ -73,6 +69,7 @@
       <div class="panel-divider"></div>
 
       <div class="panel-item">
+        <div class="icon">⏰</div>
         <p class="label">CEREMONY</p>
         <h3>6:00 PM</h3>
         <p>Ceremony &amp; Reception to follow</p>
@@ -82,29 +79,30 @@
 
   <!-- ================= VENUE ================= -->
   <section id="venue" class="section floral floral--left">
-    <img class="floral-img" src="images/flower.jpg" alt="" aria-hidden="true" />
-
     <div class="section-title">VENUE</div>
 
     <div class="panel">
-      <div class="panel-item">
-        <h3>Four Seasons Hotel Cairo<br />at Nile Plaza</h3>
+      <div class="icon">📍</div>
+      <p class="label">VENUE</p>
+      <h3>Four Seasons Hotel Cairo<br />at Nile Plaza</h3>
 
-        <p class="muted">
-          1089 Corniche El Nil, Garden City<br />
-          Cairo 11519, Egypt
-        </p>
+      <p class="muted">
+        1089 Corniche El Nil, Garden City, Cairo<br />
+        11519, Egypt
+      </p>
 
-        <p>
-          Perched on the banks of the Nile in the heart of Cairo,
-          the Four Seasons Nile Plaza is one of Egypt’s most iconic
-          luxury hotels — the perfect backdrop for our celebration.
-        </p>
+      <p>
+        Perched on the banks of the Nile in the heart of Cairo, the Four Seasons Nile Plaza
+        is one of Egypt's most iconic luxury hotels. With breathtaking views of the river,
+        world-class cuisine, and timeless elegance — it is the perfect backdrop for our celebration.
+      </p>
 
-        <a class="link" href="https://www.google.com/maps/search/?api=1&query=Four%20Seasons%20Hotel%20Cairo%20at%20Nile%20Plaza%201089%20Corniche%20El%20Nil%20Garden%20City%20Cairo%2011519" target="_blank" rel="noreferrer">
-          VIEW ON GOOGLE MAPS →
-        </a>
-      </div>
+      <a class="link"
+         target="_blank"
+         rel="noopener"
+         href="https://www.google.com/maps/search/?api=1&query=Four%20Seasons%20Hotel%20Cairo%20at%20Nile%20Plaza%201089%20Corniche%20El%20Nil%20Garden%20City%20Cairo%2011519">
+        VIEW ON GOOGLE MAPS →
+      </a>
     </div>
   </section>
 
@@ -116,7 +114,7 @@
       <div class="info-grid">
         <div class="info-block">
           <p class="label">FROM NEW YORK (JFK)</p>
-          <p>Direct flights with EgyptAir. ~11 hours.<br>
+          <p>Direct flights with EgyptAir. ~11 hours.<br />
           Cairo International Airport is ~40 min from the hotel.</p>
         </div>
 
@@ -140,8 +138,6 @@
 
   <!-- ================= THE DAY ================= -->
   <section id="day" class="section floral floral--right">
-    <img class="floral-img" src="images/flower.jpg" alt="" aria-hidden="true" />
-
     <div class="section-title">THE DAY</div>
 
     <div class="timeline">
@@ -182,8 +178,9 @@
     <div class="section-title">EXPLORE EGYPT</div>
 
     <p class="center muted">
-      While you’re in Cairo, take time to explore one of history’s
-      greatest civilizations. Here are our favourite places to visit.
+      Discover the Magic<br />
+      While you're in Cairo, take time to explore one of history's greatest civilizations.
+      Here are our favourite places to visit.
     </p>
 
     <article class="place">
@@ -194,6 +191,7 @@
       <div class="place-body">
         <h3>Pyramids of Giza</h3>
         <p>Stand in awe before the last remaining wonder of the ancient world. The Great Pyramid of Khufu — 4,500 years old — rises from the desert just 30 minutes from the Four Seasons. And don't forget to ride a camel — it's a Cairo rite of passage.</p>
+        <p class="tip">✦ Arrive at dawn — the desert glows pink and the crowds are nowhere to be seen.</p>
         <a class="link" href="#" onclick="return false;">EXPLORE →</a>
       </div>
     </article>
@@ -212,33 +210,34 @@
 
     <article class="place">
       <div class="place-media">
-        <img src="images/nile.jpg" alt="Downtown Cairo and the Nile" />
+        <img src="images/nile.jpg" alt="Downtown Cairo & the Nile" />
         <div class="place-kicker">BELLE ÉPOQUE, KHAN EL-KHALILI &amp; RIVER VIEWS</div>
       </div>
       <div class="place-body">
         <h3>Downtown Cairo &amp; the Nile</h3>
         <p>Wander through Khedivial Cairo's grand Belle Époque boulevards, then lose yourself in the labyrinthine alleys of Khan el-Khalili bazaar. Sip mint tea at El-Fishawy Café — Cairo's oldest coffeehouse, open since 1797 — and end the day with sunset over the Nile.</p>
+        <p class="tip">✦ Visit Khan el-Khalili in the evening when the lanterns glow.</p>
         <a class="link" href="#" onclick="return false;">EXPLORE →</a>
       </div>
     </article>
 
-    <!-- Optional: keep if you add the images -->
+    <!-- Optional sections (only show images if you add them; no broken icons) -->
     <article class="place">
       <div class="place-media">
-        <img src="images/new-cairo.jpg" alt="New Cairo" />
+        <img src="images/new-cairo.jpg" alt="New Cairo" onerror="this.style.display='none'"/>
         <div class="place-kicker">ROOFTOPS, BOULEVARDS &amp; MODERN CAFÉS</div>
       </div>
       <div class="place-body">
         <h3>New Cairo</h3>
-        <p>A pedestrian promenade of fountains, boutique cafés and rooftop restaurants. World-class shopping at City Stars and Cairo Festival City is just minutes away.</p>
-        <p class="note">Reserve a rooftop table at sunset — the views over New Cairo are incredible.</p>
+        <p>World-class shopping at City Stars and Cairo Festival City is just minutes away.</p>
+        <p class="tip">✦ Reserve a rooftop table at sunset — the views over New Cairo are incredible.</p>
         <a class="link" href="#" onclick="return false;">EXPLORE →</a>
       </div>
     </article>
 
     <article class="place">
       <div class="place-media">
-        <img src="images/arkan-plaza-new-zayed.jpg" alt="Arkan Plaza, New Zayed" />
+        <img src="images/arkan-plaza-new-zayed.jpg" alt="Arkan Plaza, New Zayed" onerror="this.style.display='none'"/>
         <div class="place-kicker">GREEN SUBURBS &amp; OPEN-AIR DINING</div>
       </div>
       <div class="place-body">
@@ -252,15 +251,10 @@
 
   <!-- ================= RSVP ================= -->
   <section id="rsvp" class="section floral floral--left">
-    <img class="floral-img" src="images/flower.jpg" alt="" aria-hidden="true" />
-
     <div class="section-title">RSVP</div>
 
     <h3 class="center">Kindly Reply</h3>
-    <p class="center muted">
-      Please RSVP by <em>August 1, 2026</em>. We look forward to
-      celebrating with you in the heart of Cairo.
-    </p>
+    <p class="center muted">Please RSVP by <em>August 1, 2026</em>. We look forward to celebrating with you in the heart of Cairo.</p>
 
     <form class="form subtle">
       <label class="field">
@@ -318,14 +312,12 @@
     </form>
   </section>
 
-</div>
+</main>
 
 <footer class="site-footer">
-  <div class="footer-inner">
-    <p class="names-footer">Maggy &amp; Emre</p>
-    <p class="muted">October 23, 2026 · Cairo, Egypt</p>
-    <p class="soft">With love &amp; joy ✦</p>
-  </div>
+  <p class="names-footer">Maggy &amp; Emre</p>
+  <p class="muted">October 23, 2026 · Cairo, Egypt</p>
+  <p class="soft">With love &amp; joy ✦</p>
 </footer>
 
 <script>
@@ -343,4 +335,3 @@
 
 </body>
 </html>
-``
