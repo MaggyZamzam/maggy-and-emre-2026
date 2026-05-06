@@ -1,13 +1,16 @@
-:root {
+:root { 
   --cream: #f7f2e9;
-  --paper: #f7eeee;
-  --paper-soft: #f2e4e6;
+
+  /* NEW PEARLY COLORS */
+  --paper: #fffdf9;
+  --paper-soft: #fdfaf4;
+
   --text: #292725;
   --muted: #6f6961;
   --sage: #829977;
   --soft-pink: #d8c1c2;
-  --off-white: #f8f5f2;
-  --border: #ded5cc;
+  --rose: #8b5f62;
+  --border: #e6ddd2;
 }
 
 * {
