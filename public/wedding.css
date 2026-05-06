@@ -132,7 +132,9 @@ nav a {
   font-family: "Cormorant Infant", serif;
   font-size: clamp(88px, 16vw, 175px);
   line-height: 0.9;
-  font-style: italic;
+  font-style: regular;
+  font-weight: 300;
+  letter-spacing: -1px
   margin: 70px 0 40px;
   position: relative;
   z-index: 2;
