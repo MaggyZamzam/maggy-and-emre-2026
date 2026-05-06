@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#f7f2ea" />
-  <title>Maggy &amp; Emre — October 23, 2026</title>
+  <title>Maggy & Emre — October 23, 2026</title>
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   https://fonts.gstatic.com
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -15,62 +15,53 @@
 
 <body>
 
+<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="header-inner">
     <div class="logo">M &amp; E</div>
-    <button class="menu-btn" type="button" aria-label="Menu" aria-controls="site-nav" aria-expanded="false">☰</button>
+    <button class="menu-btn" aria-label="Menu">☰</button>
   </div>
-
-  <nav id="site-nav" class="nav" aria-label="Site navigation">
-    <a href="#details">THE DETAILS</a>
-    <a href="#venue">VENUE</a>
-    <a href="#travel">GETTING THERE</a>
-    <a href="#day">THE DAY</a>
-    <a href="#explore">EXPLORE EGYPT</a>
-    <a href="#rsvp">RSVP</a>
-  </nav>
 </header>
 
 <!-- ================= HERO ================= -->
-<section class="hero section floral floral--right">
+<section class="hero">
   <div class="hero-inner">
-    <div class="micro-divider"><span class="micro-dot"></span></div>
 
-    <p class="intro">PLEASE JOIN US FOR THE WEDDING OF</p>
+    <p class="hero-eyebrow">PLEASE JOIN US FOR THE WEDDING OF</p>
 
-    <h1 class="names">
+    <h1 class="hero-names">
       Maggy <br /> &amp; <br /> Emre
     </h1>
 
-    <p class="hero-date">10.23.2026</p>
-    <p class="hero-location">FOUR SEASONS HOTEL CAIRO AT NILE PLAZA</p>
+    <p class="hero-date">October 23, 2026</p>
+    <p class="hero-location">
+      Four Seasons Hotel Cairo at Nile Plaza
+    </p>
 
-    <div class="cta-buttons">
-      <a class="btn btn-primary" href="#rsvp">RSVP NOW</a>
-      <a class="btn btn-ghost" href="#details">VIEW DETAILS</a>
+    <div class="hero-actions">
+      <a href="#rsvp" class="btn btn-primary">RSVP</a>
+      <a href="#details" class="btn btn-outline">DETAILS</a>
     </div>
+
   </div>
 </section>
 
 <main class="wrap">
 
-  <!-- ================= DETAILS ================= -->
-    <section id="THE DETAILS" 
-    <div class="section-title">WEDDING INFORMATION</div>
+<!-- ================= DETAILS ================= -->
+<section id="details" class="section details">
+  <p class="section-eyebrow">THE DETAILS</p>
+  <h2 class="section-title-large">Wedding Information</h2>
 
-  <div class="details-stack">
+  <div class="details-grid">
 
-    <div class="details-card">
-      <div class="details-icon">📅</div>
+    <div class="details-box">
       <p class="details-label">DATE</p>
       <h3 class="details-main">Friday</h3>
       <p class="details-sub">October 23, 2026</p>
     </div>
 
-    <div class="details-divider"></div>
-
-    <div class="details-card">
-      <div class="details-icon">⏰</div>
+    <div class="details-box">
       <p class="details-label">CEREMONY</p>
       <h3 class="details-main">6:00 PM</h3>
       <p class="details-sub">Ceremony &amp; Reception to follow</p>
@@ -79,105 +70,78 @@
   </div>
 </section>
 
-  <!-- ================= VENUE ================= -->
-  <section id="venue" class="section floral floral--left">
-    <div class="section-title">VENUE</div>
+<!-- ================= VENUE ================= -->
+<section id="venue" class="section venue">
+  <p class="section-eyebrow">VENUE</p>
+  <h2 class="section-title-large">Four Seasons</h2>
 
-    <div class="panel">
-      <p class="label">VENUE</p>
-      <h3>Four Seasons Hotel Cairo<br />at Nile Plaza</h3>
+  <div class="venue-box">
+    <h3 class="venue-name">Hotel Cairo at Nile Plaza</h3>
 
-      <p class="muted">
-        1089 Corniche El Nil, Garden City, Cairo<br />
-        11519, Egypt
-      </p>
+    <p class="venue-address">
+      1089 Corniche El Nil, Garden City<br />
+      Cairo 11519, Egypt
+    </p>
 
-      <p>
-        Perched on the banks of the Nile in the heart of Cairo, the Four Seasons Nile Plaza
-        is one of Egypt's most iconic luxury hotels. With breathtaking views of the river,
-        world-class cuisine, and timeless elegance — it is the perfect backdrop for our celebration.
-      </p>
+    <p class="venue-description">
+      Perched on the banks of the Nile in the heart of Cairo,
+      the Four Seasons Nile Plaza is one of Egypt’s most iconic
+      luxury hotels — the perfect backdrop for our celebration.
+    </p>
 
-      <a class="link"
-         target="_blank"
-         rel="noopener"
-         href="https://www.google.com/maps/search/?api=1&query=Four%20Seasons%20Hotel%20Cairo%20at%20Nile%20Plaza%201089%20Corniche%20El%20Nil%20Garden%20City%20Cairo%2011519">
-        VIEW ON GOOGLE MAPS →
-      </a>
-    </div>
-  </section>
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=Four%20Seasons%20Hotel%20Cairo%20at%20Nile%20Plaza"
+      class="venue-link"
+      target="_blank"
+      rel="noopener"
+    >
+      VIEW ON GOOGLE MAPS →
+    </a>
+  </div>
+</section>
 
-  <!-- ================= GETTING THERE ================= -->
-  <section id="travel" class="section">
-    <div class="panel subtle">
-      <h3 class="panel-title">Getting There</h3>
-
-      <div class="info-grid">
-        <div class="info-block">
-          <p class="label">FROM NEW YORK (JFK)</p>
-          <p>Direct flights with EgyptAir. ~11 hours.<br />
-          Cairo International Airport is ~40 min from the hotel.</p>
-        </div>
-
-        <div class="info-block">
-          <p class="label">FROM GERMANY (FRA / MUC)</p>
-          <p>Direct flights with Lufthansa &amp; EgyptAir. ~5 hours. A quick and easy journey.</p>
-        </div>
-
-        <div class="info-block">
-          <p class="label">AIRPORT TO HOTEL</p>
-          <p>The Four Seasons offers a private car service. Alternatively, taxis and ride-shares are plentiful.</p>
-        </div>
-
-        <div class="info-block">
-          <p class="label">WHERE TO STAY</p>
-          <p>Beautiful Airbnbs are available all over the city — from leafy Zamalek to historic Downtown — offering a more local Cairo experience just minutes from the venue.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= THE DAY ================= -->
-  <section id="day" class="section">
-  <div class="section-title">THE DAY</div>
+<!-- ================= THE DAY ================= -->
+<section id="day" class="section day">
+  <p class="section-eyebrow">THE DAY</p>
+  <h2 class="section-title-large">Timeline</h2>
 
   <div class="day-timeline">
 
     <div class="day-item dot-sage">
-      <div class="day-time">5:30 PM</div>
-      <div class="day-content">
+      <span class="day-time">5:30 PM</span>
+      <div>
         <h4>Guests Arrive</h4>
         <p>Welcome drinks and cocktails on arrival</p>
       </div>
     </div>
 
     <div class="day-item dot-rose">
-      <div class="day-time">6:00 PM</div>
-      <div class="day-content">
+      <span class="day-time">6:00 PM</span>
+      <div>
         <h4>Wedding Ceremony</h4>
         <p>Please be seated before the hour</p>
       </div>
     </div>
 
     <div class="day-item dot-sage">
-      <div class="day-time">7:00 PM</div>
-      <div class="day-content">
+      <span class="day-time">7:00 PM</span>
+      <div>
         <h4>Entertainment</h4>
         <p>Canapés &amp; sunset Nile views</p>
       </div>
     </div>
 
     <div class="day-item dot-rose">
-      <div class="day-time">9:00 PM</div>
-      <div class="day-content">
+      <span class="day-time">9:00 PM</span>
+      <div>
         <h4>Dinner Reception</h4>
         <p>Dinner &amp; celebration</p>
       </div>
     </div>
 
     <div class="day-item dot-sage">
-      <div class="day-time">Late Evening</div>
-      <div class="day-content">
+      <span class="day-time">Late Evening</span>
+      <div>
         <h4>More Entertainment</h4>
         <p>DJ, saxophone, singing &amp; dancing</p>
       </div>
@@ -186,165 +150,34 @@
   </div>
 </section>
 
-  <!-- ================= EXPLORE EGYPT ================= -->
-  <section id="explore" class="section">
-    <div class="section-title">EXPLORE EGYPT</div>
+<!-- ================= RSVP ================= -->
+<section id="rsvp" class="section rsvp">
+  <p class="section-eyebrow">RSVP</p>
+  <h2 class="section-title-large">Kindly Reply</h2>
 
-    <p class="center muted">
-      Discover the Magic<br />
-      While you're in Cairo, take time to explore one of history's greatest civilizations.
-      Here are our favourite places to visit.
-    </p>
+  <form class="rsvp-form">
+    <input type="text" placeholder="First Name *" required />
+    <input type="text" placeholder="Last Name *" required />
+    <input type="email" placeholder="Email Address *" required />
+    <select required>
+      <option value="">Will you attend?</option>
+      <option>Yes</option>
+      <option>No</option>
+    </select>
 
-    <article class="place">
-      <div class="place-media">
-        <img src="images/pyramids-sphinx.jpg" alt="Pyramids of Giza" />
-        <div class="place-kicker">ANCIENT WONDER OF THE WORLD</div>
-      </div>
-      <div class="place-body">
-        <h3>Pyramids of Giza</h3>
-        <p>Stand in awe before the last remaining wonder of the ancient world. The Great Pyramid of Khufu — 4,500 years old — rises from the desert just 30 minutes from the Four Seasons. And don't forget to ride a camel — it's a Cairo rite of passage.</p>
-        <p class="tip">✦ Arrive at dawn — the desert glows pink and the crowds are nowhere to be seen.</p>
-        <a class="link" href="#" onclick="return false;">EXPLORE →</a>
-      </div>
-    </article>
-
-    <article class="place">
-      <div class="place-media">
-        <img src="images/grand-egyptian-museum.jpg" alt="Grand Egyptian Museum" />
-        <div class="place-kicker">THE WORLD'S LARGEST ARCHAEOLOGICAL MUSEUM</div>
-      </div>
-      <div class="place-body">
-        <h3>Grand Egyptian Museum</h3>
-        <p>Opened in 2023, the GEM houses over 100,000 artifacts including the complete, unseen treasures of Tutankhamun. The dramatic glass-and-stone façade overlooks the Pyramids themselves — and at night, the experience is bathed in golden light.</p>
-        <a class="link" href="#" onclick="return false;">EXPLORE →</a>
-      </div>
-    </article>
-
-    <article class="place">
-      <div class="place-media">
-        <img src="images/nile.jpg" alt="Downtown Cairo & the Nile" />
-        <div class="place-kicker">BELLE ÉPOQUE, KHAN EL-KHALILI &amp; RIVER VIEWS</div>
-      </div>
-      <div class="place-body">
-        <h3>Downtown Cairo &amp; the Nile</h3>
-        <p>Wander through Khedivial Cairo's grand Belle Époque boulevards, then lose yourself in the labyrinthine alleys of Khan el-Khalili bazaar. Sip mint tea at El-Fishawy Café — Cairo's oldest coffeehouse, open since 1797 — and end the day with sunset over the Nile.</p>
-        <p class="tip">✦ Visit Khan el-Khalili in the evening when the lanterns glow.</p>
-        <a class="link" href="#" onclick="return false;">EXPLORE →</a>
-      </div>
-    </article>
-
-    <!-- Optional sections (only show images if you add them; no broken icons) -->
-    <article class="place">
-      <div class="place-media">
-        <img src="images/new-cairo.jpg" alt="New Cairo" onerror="this.style.display='none'"/>
-        <div class="place-kicker">ROOFTOPS, BOULEVARDS &amp; MODERN CAFÉS</div>
-      </div>
-      <div class="place-body">
-        <h3>New Cairo</h3>
-        <p>World-class shopping at City Stars and Cairo Festival City is just minutes away.</p>
-        <p class="tip">✦ Reserve a rooftop table at sunset — the views over New Cairo are incredible.</p>
-        <a class="link" href="#" onclick="return false;">EXPLORE →</a>
-      </div>
-    </article>
-
-    <article class="place">
-      <div class="place-media">
-        <img src="images/arkan-plaza-new-zayed.jpg" alt="Arkan Plaza, New Zayed" onerror="this.style.display='none'"/>
-        <div class="place-kicker">GREEN SUBURBS &amp; OPEN-AIR DINING</div>
-      </div>
-      <div class="place-body">
-        <h3>Arkan Plaza, New Zayed</h3>
-        <p>Arkan Plaza is the social heart of New Zayed — a beautifully landscaped open-air piazza of artisan boutiques, breezy outdoor cafés and weekend farmers' markets. After sunset the trees and fountains light up and the whole plaza glows.</p>
-        <a class="link" href="#" onclick="return false;">EXPLORE →</a>
-      </div>
-    </article>
-
-  </section>
-
-  <!-- ================= RSVP ================= -->
-  <section id="rsvp" class="section floral floral--left">
-    <div class="section-title">RSVP</div>
-
-    <h3 class="center">Kindly Reply</h3>
-    <p class="center muted">Please RSVP by <em>August 1, 2026</em>. We look forward to celebrating with you in the heart of Cairo.</p>
-
-    <form class="form subtle">
-      <label class="field">
-        <span>FIRST NAME *</span>
-        <input type="text" required>
-      </label>
-
-      <label class="field">
-        <span>LAST NAME *</span>
-        <input type="text" required>
-      </label>
-
-      <label class="field">
-        <span>EMAIL ADDRESS *</span>
-        <input type="email" required>
-      </label>
-
-      <label class="field">
-        <span>PHONE NUMBER</span>
-        <input type="tel">
-      </label>
-
-      <label class="field">
-        <span>WILL YOU ATTEND? *</span>
-        <select required>
-          <option value="" selected disabled>Please select…</option>
-          <option>Yes</option>
-          <option>No</option>
-        </select>
-      </label>
-
-      <label class="field">
-        <span>NUMBER OF GUESTS</span>
-        <select>
-          <option>1</option><option>2</option><option>3</option><option>4</option>
-        </select>
-      </label>
-
-      <label class="field">
-        <span>TRAVELING FROM</span>
-        <select>
-          <option>Please select…</option>
-          <option>New York (JFK)</option>
-          <option>Germany (FRA / MUC)</option>
-          <option>Other</option>
-        </select>
-      </label>
-
-      <label class="field field--full">
-        <span>A NOTE FOR THE COUPLE</span>
-        <textarea rows="4" placeholder="Share your well wishes…"></textarea>
-      </label>
-
-      <button type="submit" class="btn btn-primary btn-wide">SEND MY RSVP</button>
-    </form>
-  </section>
+    <button type="submit" class="btn btn-primary full">
+      SEND RSVP
+    </button>
+  </form>
+</section>
 
 </main>
 
+<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
-  <p class="names-footer">Maggy &amp; Emre</p>
-  <p class="muted">October 23, 2026 · Cairo, Egypt</p>
-  <p class="soft">With love &amp; joy ✦</p>
+  <p class="footer-names">Maggy &amp; Emre</p>
+  <p class="footer-meta">October 23, 2026 · Cairo, Egypt</p>
 </footer>
-
-<script>
-  const btn = document.querySelector('.menu-btn');
-  const nav = document.querySelector('#site-nav');
-  btn.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
-    btn.setAttribute('aria-expanded', String(isOpen));
-  });
-  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    nav.classList.remove('open');
-    btn.setAttribute('aria-expanded', 'false');
-  }));
-</script>
 
 </body>
 </html>
