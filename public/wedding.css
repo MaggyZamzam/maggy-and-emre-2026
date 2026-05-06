@@ -360,9 +360,20 @@ footer h2 {
 .timeline {
   max-width: 900px;
   margin: auto;
-  border-left: 2px solid var(--border);
   padding-left: 55px;
+  position: realtive;
 }
+
+.timeline::before {
+  content:"";
+  position: absolute;
+  left: -6px;
+  top: 16px;
+  bottom: 48px;
+  width: 2px;
+  background: var(--border);
+}
+
 
 .timeline-item {
   position: relative;
