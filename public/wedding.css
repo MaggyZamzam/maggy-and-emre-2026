@@ -267,38 +267,89 @@ p{ margin:0 0 10px; }
 }
 
 /* Timeline (multi-color dots) */
-.timeline{
-  margin: 8px 0 10px;
-  border-left: 2px solid rgba(125,143,115,.20);
-  padding-left: 16px;
+.
+.day-timeline {
+  position: relative;
+  margin-top: 24px;
+  padding-left: 34px;
 }
-.event{
-  position:relative;
-  padding: 10px 0 12px 10px;
-}
-.event::before{
-  content:"";
-  position:absolute;
-  left:-22px;
-  top:16px;
-  width:10px;
-  height:10px;
-  border-radius:999px;
-  background: var(--dot, var(--sage));
-  box-shadow: 0 0 0 6px rgba(0,0,0,0.04);
-}
-.dot-sage{ --dot: var(--sage); }
-.dot-rose{ --dot: var(--rose); }
-.dot-stone{ --dot: var(--stone); }
 
-.time{
-  display:inline-block;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  font-size:.72rem;
-  color:var(--muted);
-  margin-bottom:4px;
+/* vertical sage line */
+.day-timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(125, 143, 115, 0.45); /* sage green */
 }
+
+/* each row */
+.day-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  column-gap: 24px;
+  padding: 16px 0;
+}
+
+/* time text */
+.day-time {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #7d8f73; /* olive / sage */
+  padding-top: 2px;
+  white-space: nowrap;
+}
+
+/* content */
+.day-content h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.4rem;
+  margin: 0 0 4px;
+}
+
+.day-content p {
+  margin: 0;
+  color: rgba(31, 31, 31, 0.75);
+}
+
+/* bullet dots */
+.day-item::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 26px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--dot-color);
+  box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.04);
+}
+
+/* color variants */
+.dot-sage {
+  --dot-color: #7d8f73;
+}
+
+.dot-rose {
+  --dot-color: #c89aa1;
+}
+
+/* mobile tuning */
+@media (max-width: 520px) {
+  .day-item {
+    grid-template-columns: 70px 1fr;
+    column-gap: 18px;
+  }
+
+  .day-time {
+    font-size: 0.7rem;
+  }
+}
+
 
 /* Explore places */
 .place{
