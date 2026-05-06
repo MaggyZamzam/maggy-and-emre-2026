@@ -1,11 +1,13 @@
-:root { 
+:root {
   --cream: #f7f2e9;
   --paper: #fffdfa;
   --text: #292725;
   --muted: #6f6961;
   --sage: #829977;
   --soft-pink: #d8c1c2;
+  --rose: #8b5f62;
   --border: #ded5cc;
+  --dark-beige: #9b8f83;
 }
 
 * {
@@ -53,6 +55,7 @@ body {
   border: none;
   font-size: 30px;
   color: var(--text);
+  cursor: pointer;
 }
 
 nav {
@@ -78,13 +81,11 @@ nav a {
 
 .eyebrow,
 .location,
-.section-title p,
 .label,
 .rsvp-form label,
-.photo-label,
 .info-card h4 {
   text-transform: uppercase;
-  letter-spacing: 8px;
+  letter-spacing: 7px;
   color: var(--muted);
   font-size: 14px;
 }
@@ -95,6 +96,8 @@ nav a {
   line-height: 0.9;
   font-style: italic;
   margin: 70px 0 40px;
+  position: relative;
+  z-index: 2;
 }
 
 .hero h1 span {
@@ -117,7 +120,7 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 25px;
+  gap: 24px;
 }
 
 .divider::before,
@@ -137,23 +140,26 @@ nav a {
 }
 
 .flower {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  opacity: 0.75;
+  width: 260px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.22;
   position: absolute;
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  box-shadow: none;
+  filter: blur(0.2px);
+  mix-blend-mode: multiply;
+  z-index: 1;
 }
 
 .flower-top {
-  right: 8%;
-  top: 40px;
+  right: 4%;
+  top: 45px;
 }
 
 .flower-bottom {
-  left: 5%;
-  bottom: 110px;
+  left: 1%;
+  bottom: 105px;
 }
 
 .hero-buttons {
@@ -162,6 +168,8 @@ nav a {
   justify-content: center;
   gap: 0;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
 }
 
 .btn {
@@ -184,20 +192,25 @@ nav a {
 }
 
 .section {
-  padding: 120px 7%;
+  padding: 110px 7%;
   border-top: 1px solid var(--border);
 }
 
 .section-title {
-  margin-bottom: 80px;
+  margin-bottom: 70px;
+  flex-wrap: nowrap;
 }
 
 .section-title p {
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
   color: var(--sage);
-  font-size: 28px;
+  font-size: clamp(38px, 6vw, 58px);
   font-weight: 700;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin: 0;
 }
 
 .details-card {
@@ -209,7 +222,7 @@ nav a {
 
 .detail-box {
   text-align: center;
-  padding: 75px 40px;
+  padding: 65px 40px;
   border-bottom: 1px solid var(--border);
 }
 
@@ -218,8 +231,17 @@ nav a {
 }
 
 .icon {
-  font-size: 34px;
+  font-size: 32px;
   margin-bottom: 20px;
+}
+
+.label {
+  color: var(--sage);
+  font-weight: 600;
+}
+
+.detail-accent {
+  color: var(--rose) !important;
 }
 
 h2,
@@ -228,9 +250,12 @@ h3 {
   line-height: 1.1;
 }
 
-.detail-box h3,
+.detail-box h3 {
+  font-size: clamp(36px, 6vw, 52px);
+  margin: 15px 0;
+}
+
 .info-card h2,
-.place-card h3,
 .intro h2,
 .rsvp-section h2,
 footer h2 {
@@ -238,13 +263,26 @@ footer h2 {
   margin: 15px 0;
 }
 
-.detail-box p,
+.place-card h3 {
+  font-size: clamp(32px, 5vw, 46px);
+  margin: 18px 0;
+}
+
+.detail-box p {
+  font-size: 22px;
+  color: var(--muted);
+}
+
 .info-card p,
 .place-card p,
 .timeline-item span,
 .rsvp-note {
-  font-size: 24px;
+  font-size: 19px;
   color: var(--muted);
+}
+
+.venue-card p {
+  font-size: 18px;
 }
 
 .info-card {
@@ -252,12 +290,19 @@ footer h2 {
   margin: 0 auto 70px;
   background: rgba(255, 253, 250, 0.75);
   border: 1px solid var(--border);
-  padding: 65px;
+  padding: 60px;
 }
 
 .info-card h4 {
   color: var(--sage);
-  margin: 40px 0 5px;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 36px 0 6px;
+  white-space: nowrap;
+}
+
+.travel-card p {
+  font-size: 17px;
 }
 
 .text-link,
@@ -280,7 +325,7 @@ footer h2 {
 
 .timeline-item {
   position: relative;
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 }
 
 .timeline-item::before {
@@ -303,10 +348,11 @@ footer h2 {
   text-transform: uppercase;
   letter-spacing: 5px;
   margin: 0;
+  font-size: 17px;
 }
 
 .timeline-item h3 {
-  font-size: 42px;
+  font-size: 32px;
   margin: 5px 0;
 }
 
@@ -316,9 +362,13 @@ footer h2 {
   margin: 0 auto 70px;
 }
 
+.intro h2 {
+  color: var(--rose);
+}
+
 .intro p {
   color: var(--muted);
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .place-card {
@@ -327,35 +377,48 @@ footer h2 {
   background: var(--paper);
   border: 1px solid var(--border);
   overflow: hidden;
+  padding: 28px;
+}
+
+.place-image-frame {
+  border: 1px solid var(--border);
+  background: var(--cream);
+  padding: 12px;
 }
 
 .place-card img {
   width: 100%;
-  height: 420px;
+  height: 360px;
   object-fit: cover;
   display: block;
 }
 
-.place-card div {
-  padding: 55px 65px;
+.place-content {
+  padding: 30px 28px 20px;
 }
 
 .photo-label {
-  color: white;
-  background: rgba(0, 0, 0, 0.45);
-  display: inline-block;
-  padding: 8px 14px;
-  margin-top: -110px;
-  position: relative;
+  color: var(--sage);
+  display: block;
+  margin: 8px 0 18px;
+  padding: 0;
+  background: none;
+  position: static;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-style: italic;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
 }
 
 .place-card em {
   display: block;
   background: #f0f3ed;
   color: #60745c;
-  padding: 22px;
-  margin: 35px 0 10px;
-  font-size: 20px;
+  padding: 18px 20px;
+  margin: 28px 0 8px;
+  font-size: 17px;
 }
 
 .rsvp-section {
@@ -363,12 +426,14 @@ footer h2 {
 }
 
 .rsvp-flower {
-  width: 135px;
-  height: 135px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 155px;
+  height: auto;
+  object-fit: contain;
   margin-bottom: 30px;
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.1);
+  opacity: 0.35;
+  border-radius: 0;
+  box-shadow: none;
+  mix-blend-mode: multiply;
 }
 
 .rsvp-note em {
@@ -434,10 +499,13 @@ footer {
 }
 
 footer img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 130px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.35;
+  border-radius: 0;
+  box-shadow: none;
+  mix-blend-mode: multiply;
 }
 
 footer p {
@@ -484,12 +552,10 @@ footer span {
 
   .eyebrow,
   .location,
-  .section-title p,
   .label,
   .rsvp-form label,
-  .photo-label,
   .info-card h4 {
-    letter-spacing: 6px;
+    letter-spacing: 5px;
     font-size: 12px;
   }
 
@@ -502,17 +568,17 @@ footer span {
   }
 
   .flower {
-    width: 135px;
-    height: 135px;
+    width: 190px;
+    opacity: 0.22;
   }
 
   .flower-top {
-    right: -35px;
+    right: -45px;
     top: 85px;
   }
 
   .flower-bottom {
-    left: -25px;
+    left: -45px;
     bottom: 150px;
   }
 
@@ -527,36 +593,75 @@ footer span {
   }
 
   .section {
-    padding: 95px 6%;
+    padding: 90px 6%;
+  }
+
+  .section-title {
+    gap: 14px;
+  }
+
+  .section-title p {
+    font-size: 32px;
+    letter-spacing: 4px;
   }
 
   .divider::before,
   .divider::after,
   .section-title span {
-    width: 90px;
+    width: 70px;
   }
 
   .info-card,
-  .rsvp-form,
-  .place-card div {
+  .rsvp-form {
     padding: 38px 32px;
   }
 
-  .detail-box p,
+  .info-card h4 {
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+
   .info-card p,
   .place-card p,
   .timeline-item span,
   .rsvp-note,
-  .intro p {
+  .intro p,
+  .travel-card p,
+  .venue-card p {
+    font-size: 17px;
+  }
+
+  .detail-box p {
     font-size: 19px;
   }
 
+  .timeline-item h3 {
+    font-size: 28px;
+  }
+
+  .timeline-item p {
+    font-size: 14px;
+  }
+
+  .place-card {
+    padding: 16px;
+  }
+
   .place-card img {
-    height: 310px;
+    height: 260px;
+  }
+
+  .place-content {
+    padding: 24px 18px 14px;
   }
 
   .photo-label {
-    margin-top: -95px;
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .place-card em {
+    font-size: 15px;
   }
 
   button[type="submit"] {
