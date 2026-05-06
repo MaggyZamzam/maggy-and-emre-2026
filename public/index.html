@@ -1,285 +1,277 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maggy & Emre — October 23, 2026</title>
-
-  <!-- FONTS -->
+  <title>Maggy & Emre | Wedding 2026</title>
+  <link rel="stylesheet" href="wedding.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <!-- STYLES -->
-  <style>
-    :root {
-      --bg: #f7f2ea;
-      --white: #ffffff;
-      --ink: #1f1f1f;
-      --muted: #6f6a63;
-      --sage: #7d8f73;
-      --rose: #c89aa1;
-      --line: rgba(0,0,0,0.08);
-      --max: 760px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: "Jost", system-ui, sans-serif;
-      line-height: 1.6;
-    }
-
-    h1, h2, h3, h4 {
-      font-family: "Cormorant Garamond", serif;
-      font-weight: 500;
-      margin: 0;
-    }
-
-    a {
-      text-decoration: none;
-      color: var(--ink);
-    }
-
-    .wrap {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 0 22px;
-    }
-
-    /* HEADER */
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(247,242,234,0.95);
-      border-bottom: 1px solid var(--line);
-      z-index: 10;
-    }
-
-    .header-inner {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 18px 22px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      letter-spacing: 0.08em;
-      font-size: 1.1rem;
-    }
-
-    /* HERO */
-    .hero {
-      padding: 80px 0 90px;
-      text-align: center;
-    }
-
-    .hero-eyebrow {
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      font-size: 0.7rem;
-      color: var(--muted);
-      margin-bottom: 14px;
-    }
-
-    .hero-names {
-      font-size: 3.4rem;
-      line-height: 1.05;
-      margin-bottom: 24px;
-    }
-
-    .hero-date {
-      font-size: 1.2rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .hero-location {
-      font-size: 0.85rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    /* SECTION */
-    section {
-      padding: 70px 0;
-    }
-
-    .section-eyebrow {
-      text-align: center;
-      letter-spacing: 0.3em;
-      font-size: 0.7rem;
-      color: var(--sage);
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 2.6rem;
-      margin-bottom: 48px;
-    }
-
-    /* BOXES */
-    .box {
-      background: var(--white);
-      border: 1px solid var(--line);
-      padding: 42px 28px;
-      margin-bottom: 28px;
-      text-align: center;
-    }
-
-    .box-label {
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      font-size: 0.7rem;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-
-    .box-main {
-      font-size: 2rem;
-      margin-bottom: 14px;
-    }
-
-    .box-sub {
-      font-size: 1rem;
-    }
-
-    /* DAY TIMELINE */
-    .timeline {
-      border-left: 2px solid var(--sage);
-      padding-left: 30px;
-    }
-
-    .timeline-item {
-      position: relative;
-      padding: 18px 0 18px 40px;
-    }
-
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      left: -9px;
-      top: 26px;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--dot);
-    }
-
-    .timeline-time {
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--sage);
-      margin-bottom: 6px;
-    }
-
-    footer {
-      padding: 60px 0;
-      text-align: center;
-      color: var(--muted);
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <header class="nav">
+    <a href="#home" class="logo">M & E</a>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-<header>
-  <div class="header-inner">
-    <div class="logo">M &amp; E</div>
-    <div>☰</div>
-  </div>
-</header>
+    <nav id="menu">
+      <a href="#details">Details</a>
+      <a href="#travel">Travel</a>
+      <a href="#day">The Day</a>
+      <a href="#egypt">Explore Egypt</a>
+      <a href="#rsvp">RSVP</a>
+    </nav>
+  </header>
 
-<section class="hero">
-  <div class="wrap">
-    <p class="hero-eyebrow">Please Join Us For The Wedding Of</p>
-    <h1 class="hero-names">Maggy<br>&amp;<br>Emre</h1>
-    <p class="hero-date">October 23, 2026</p>
-    <p class="hero-location">Four Seasons Hotel Cairo at Nile Plaza</p>
-  </div>
-</section>
+  <main>
+    <section id="home" class="hero">
+      <img src="/images/flower.jpg" class="flower flower-top" alt="Flowers">
 
-<section>
-  <div class="wrap">
-    <p class="section-eyebrow">The Details</p>
-    <h2 class="section-title">Wedding Information</h2>
+      <p class="eyebrow">Please join us for the wedding of</p>
 
-    <div class="box">
-      <p class="box-label">Date</p>
-      <h3 class="box-main">Friday</h3>
-      <p class="box-sub">October 23, 2026</p>
-    </div>
+      <h1>Maggy <span>&</span> Emre</h1>
 
-    <div class="box">
-      <p class="box-label">Ceremony</p>
-      <h3 class="box-main">6:00 PM</h3>
-      <p class="box-sub">Ceremony &amp; Reception to follow</p>
-    </div>
-  </div>
-</section>
+      <div class="divider"><span></span></div>
 
-<section>
-  <div class="wrap">
-    <p class="section-eyebrow">The Day</p>
-    <h2 class="section-title">Timeline</h2>
+      <h2>10.23.2026</h2>
+      <p class="location">Four Seasons Hotel Cairo at Nile Plaza</p>
 
-    <div class="timeline">
-
-      <div class="timeline-item" style="--dot: var(--sage);">
-        <div class="timeline-time">5:30 PM</div>
-        <h4>Guests Arrive</h4>
-        <p>Welcome drinks and cocktails</p>
+      <div class="hero-buttons">
+        <a href="#rsvp" class="btn primary">RSVP Now</a>
+        <a href="#details" class="btn secondary">View Details</a>
       </div>
 
-      <div class="timeline-item" style="--dot: var(--rose);">
-        <div class="timeline-time">6:00 PM</div>
-        <h4>Wedding Ceremony</h4>
-        <p>Please be seated before the hour</p>
+      <img src="/images/flower.jpg" class="flower flower-bottom" alt="Flowers">
+    </section>
+
+    <section id="details" class="section">
+      <div class="section-title">
+        <span></span>
+        <p>The Details</p>
+        <span></span>
       </div>
 
-      <div class="timeline-item" style="--dot: var(--sage);">
-        <div class="timeline-time">9:00 PM</div>
-        <h4>Dinner Reception</h4>
-        <p>Dinner &amp; celebration</p>
+      <div class="details-card">
+        <div class="detail-box">
+          <div class="icon">🗓️</div>
+          <p class="label">Date</p>
+          <h3>Friday</h3>
+          <p>October 23, 2026</p>
+        </div>
+
+        <div class="detail-box">
+          <div class="icon">⏰</div>
+          <p class="label">Ceremony</p>
+          <h3>6:00 PM</h3>
+          <p>Ceremony & Reception to follow</p>
+        </div>
+
+        <div class="detail-box">
+          <div class="icon">📍</div>
+          <p class="label">Venue</p>
+          <h3>Four Seasons Hotel Cairo</h3>
+          <p>at Nile Plaza</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="travel" class="section">
+      <div class="info-card">
+        <h2>Four Seasons Hotel Cairo at Nile Plaza</h2>
+        <p>1089 Corniche El Nil, Garden City, Cairo 11519, Egypt</p>
+        <p>
+          Perched on the banks of the Nile in the heart of Cairo, the Four Seasons Nile Plaza is one of Egypt's most iconic luxury hotels. With breathtaking views of the river, world-class cuisine, and timeless elegance, it is the perfect backdrop for our celebration.
+        </p>
+        <a class="text-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Four+Seasons+Hotel+Cairo+at+Nile+Plaza">View on Google Maps →</a>
       </div>
 
-    </div>
-  </div>
-</section>
+      <div class="info-card">
+        <h2>Getting There</h2>
 
-<footer>
-  <p>Maggy &amp; Emre</p>
-  <p>October 23, 2026 · Cairo, Egypt</p>
-</footer>
+        <h4>From New York (JFK)</h4>
+        <p>Direct flights with EgyptAir. Around 11 hours. Cairo International Airport is around 40 minutes from the hotel.</p>
 
-<!-- =========================================================
-     EXPANSION BLOCK
-     Duplicate the block below repeatedly to exceed 1500 lines
-========================================================= -->
+        <h4>From Germany (FRA / MUC)</h4>
+        <p>Direct flights with Lufthansa & EgyptAir. Around 5 hours. A quick and easy journey.</p>
 
-<!--
-<section>
-  <div class="wrap">
-    <div class="box">
-      <p class="box-label">Placeholder</p>
-      <h3 class="box-main">Expandable Section</h3>
-      <p class="box-sub">Duplicate this section to scale code length.</p>
-    </div>
-  </div>
-</section>
--->
+        <h4>Airport to Hotel</h4>
+        <p>The Four Seasons offers a private car service. Alternatively, taxis and ride-shares are plentiful.</p>
 
+        <h4>Where to Stay</h4>
+        <p>Beautiful Airbnbs are available across Cairo, from leafy Zamalek to historic Downtown, offering a more local Cairo experience minutes from the venue.</p>
+      </div>
+    </section>
+
+    <section id="day" class="section timeline-section">
+      <div class="section-title">
+        <span></span>
+        <p>The Day</p>
+        <span></span>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <p>5:30 PM</p>
+          <h3>Guests Arrive</h3>
+          <span>Welcome drinks and cocktails on arrival</span>
+        </div>
+
+        <div class="timeline-item pink">
+          <p>6:00 PM</p>
+          <h3>Wedding Ceremony</h3>
+          <span>Please be seated before the hour</span>
+        </div>
+
+        <div class="timeline-item">
+          <p>7:00 PM</p>
+          <h3>Entertainment</h3>
+          <span>Canapés & sunset Nile views</span>
+        </div>
+
+        <div class="timeline-item pink">
+          <p>9:00 PM</p>
+          <h3>Dinner Reception</h3>
+          <span>Dinner & celebration</span>
+        </div>
+
+        <div class="timeline-item">
+          <p>Late Evening</p>
+          <h3>More Entertainment</h3>
+          <span>DJ, saxophone, singing & dancing</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="egypt" class="section">
+      <div class="section-title">
+        <span></span>
+        <p>Explore Egypt</p>
+        <span></span>
+      </div>
+
+      <div class="intro">
+        <h2>Discover the Magic</h2>
+        <p>While you're in Cairo, take time to explore one of history's greatest civilizations. Here are our favourite places to visit.</p>
+      </div>
+
+      <div class="place-card">
+        <img src="/images/pyramids-sphinx.jpg" alt="Pyramids of Giza">
+        <div>
+          <p class="photo-label">Ancient Wonder of the World</p>
+          <h3>Pyramids of Giza</h3>
+          <p>Stand in awe before the last remaining wonder of the ancient world. The Great Pyramid of Khufu rises from the desert just 30 minutes from the Four Seasons.</p>
+          <em>✦ Arrive at dawn, the desert glows pink and the crowds are nowhere to be seen.</em>
+          <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Pyramids+of+Giza">Explore →</a>
+        </div>
+      </div>
+
+      <div class="place-card">
+        <img src="/images/grand-egyptian-museum.jpg" alt="Grand Egyptian Museum">
+        <div>
+          <p class="photo-label">The World's Largest Archaeological Museum</p>
+          <h3>Grand Egyptian Museum</h3>
+          <p>The GEM houses over 100,000 artifacts including the treasures of Tutankhamun. At night, the monument is bathed in golden light.</p>
+          <em>✦ Visit after dark, the illuminated façade is unforgettable.</em>
+          <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Grand+Egyptian+Museum">Explore →</a>
+        </div>
+      </div>
+
+      <div class="place-card">
+        <img src="/images/nile.jpg" alt="The Nile">
+        <div>
+          <p class="photo-label">Belle Époque, Khan el-Khalili & River Views</p>
+          <h3>Downtown Cairo & the Nile</h3>
+          <p>Wander through Khedivial Cairo's grand boulevards, lose yourself in Khan el-Khalili, and end the day with sunset over the Nile.</p>
+          <em>✦ Visit Khan el-Khalili in the evening when the lanterns glow.</em>
+          <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Downtown+Cairo+Nile">Explore →</a>
+        </div>
+      </div>
+
+      <div class="place-card">
+        <img src="/images/sheikh-zayed.jpg" alt="Sheikh Zayed">
+        <div>
+          <p class="photo-label">Green Suburbs & Open-Air Dining</p>
+          <h3>Arkan Plaza, New Zayed</h3>
+          <p>Arkan Plaza is a social heart of New Zayed, with boutiques, cafés, outdoor dining, fountains, and a beautiful evening atmosphere.</p>
+          <em>✦ Go in the evening when the plaza lights come on.</em>
+          <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Arkan+Plaza+New+Zayed">Explore →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp" class="section rsvp-section">
+      <div class="section-title">
+        <span></span>
+        <p>RSVP</p>
+        <span></span>
+      </div>
+
+      <img src="/images/flower.jpg" class="rsvp-flower" alt="Flowers">
+
+      <h2>Kindly Reply</h2>
+      <p class="rsvp-note">Please RSVP by <em>August 1, 2026.</em> We look forward to celebrating with you in the heart of Cairo.</p>
+
+      <form name="wedding-rsvp" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="rsvp-form">
+        <input type="hidden" name="form-name" value="wedding-rsvp">
+
+        <p class="hidden">
+          <label>Do not fill this out: <input name="bot-field"></label>
+        </p>
+
+        <label>First Name *</label>
+        <input type="text" name="first-name" placeholder="Margaret" required>
+
+        <label>Last Name *</label>
+        <input type="text" name="last-name" placeholder="Smith" required>
+
+        <label>Email Address *</label>
+        <input type="email" name="email" placeholder="you@example.com" required>
+
+        <label>Phone Number</label>
+        <input type="tel" name="phone" placeholder="+1 (212) 555-0100">
+
+        <label>Will You Attend? *</label>
+        <select name="attendance" required>
+          <option value="">Please select...</option>
+          <option value="Yes, I will attend">Yes, I will attend</option>
+          <option value="No, I cannot attend">No, I cannot attend</option>
+        </select>
+
+        <label>Number of Guests</label>
+        <select name="guests">
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+
+        <label>Traveling From</label>
+        <select name="traveling-from">
+          <option value="">Please select...</option>
+          <option value="New York">New York</option>
+          <option value="Germany">Germany</option>
+          <option value="Egypt">Egypt</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label>A Note for the Couple</label>
+        <textarea name="message" placeholder="Share your well wishes..."></textarea>
+
+        <button type="submit">Send My RSVP</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <img src="/images/flower.jpg" alt="Flowers">
+    <h2>Maggy & Emre</h2>
+    <p>October 23, 2026 · Cairo, Egypt</p>
+    <span>With love & joy ✦</span>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
