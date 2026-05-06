@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Maggy & Emre | Wedding 2026</title>
   <link rel="stylesheet" href="wedding.css" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -13,10 +14,14 @@
 <body>
   <header class="nav">
     <a href="#home" class="logo">M & E</a>
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <button class="menu-btn" type="button" onclick="toggleMenu()" aria-label="Open menu">
+      ☰
+    </button>
 
     <nav id="menu">
       <a href="#details">Details</a>
+      <a href="#venue">Venue</a>
       <a href="#travel">Travel</a>
       <a href="#day">The Day</a>
       <a href="#egypt">Explore Egypt</a>
@@ -26,7 +31,7 @@
 
   <main>
     <section id="home" class="hero">
-      <img src="/images/flower.jpg" class="flower flower-top" alt="Flowers">
+      <img src="/images/flower.jpg" class="flower flower-top" alt="Soft wedding flowers">
 
       <p class="eyebrow">Please join us for the wedding of</p>
 
@@ -42,7 +47,7 @@
         <a href="#details" class="btn secondary">View Details</a>
       </div>
 
-      <img src="/images/flower.jpg" class="flower flower-bottom" alt="Flowers">
+      <img src="/images/flower.jpg" class="flower flower-bottom" alt="Soft wedding flowers">
     </section>
 
     <section id="details" class="section">
@@ -57,38 +62,57 @@
           <div class="icon">🗓️</div>
           <p class="label">Date</p>
           <h3>Friday</h3>
-          <p>October 23, 2026</p>
+          <p class="detail-accent">October 23, 2026</p>
         </div>
 
         <div class="detail-box">
           <div class="icon">⏰</div>
           <p class="label">Ceremony</p>
           <h3>6:00 PM</h3>
-          <p>Ceremony & Reception to follow</p>
+          <p class="detail-accent">Ceremony & Reception to follow</p>
         </div>
 
         <div class="detail-box">
           <div class="icon">📍</div>
           <p class="label">Venue</p>
           <h3>Four Seasons Hotel Cairo</h3>
-          <p>at Nile Plaza</p>
+          <p class="detail-accent">at Nile Plaza</p>
         </div>
       </div>
     </section>
 
-    <section id="travel" class="section">
-      <div class="info-card">
+    <section id="venue" class="section venue-section">
+      <div class="section-title">
+        <span></span>
+        <p>Venue</p>
+        <span></span>
+      </div>
+
+      <div class="info-card venue-card">
         <h2>Four Seasons Hotel Cairo at Nile Plaza</h2>
-        <p>1089 Corniche El Nil, Garden City, Cairo 11519, Egypt</p>
+
+        <p>
+          1089 Corniche El Nil, Garden City, Cairo 11519, Egypt
+        </p>
+
         <p>
           Perched on the banks of the Nile in the heart of Cairo, the Four Seasons Nile Plaza is one of Egypt's most iconic luxury hotels. With breathtaking views of the river, world-class cuisine, and timeless elegance, it is the perfect backdrop for our celebration.
         </p>
-        <a class="text-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Four+Seasons+Hotel+Cairo+at+Nile+Plaza">View on Google Maps →</a>
+
+        <a class="text-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Four+Seasons+Hotel+Cairo+at+Nile+Plaza">
+          View on Google Maps →
+        </a>
+      </div>
+    </section>
+
+    <section id="travel" class="section travel-section">
+      <div class="section-title">
+        <span></span>
+        <p>Getting There</p>
+        <span></span>
       </div>
 
-      <div class="info-card">
-        <h2>Getting There</h2>
-
+      <div class="info-card travel-card">
         <h4>From New York (JFK)</h4>
         <p>Direct flights with EgyptAir. Around 11 hours. Cairo International Airport is around 40 minutes from the hotel.</p>
 
@@ -99,7 +123,7 @@
         <p>The Four Seasons offers a private car service. Alternatively, taxis and ride-shares are plentiful.</p>
 
         <h4>Where to Stay</h4>
-        <p>Beautiful Airbnbs are available across Cairo, from leafy Zamalek to historic Downtown, offering a more local Cairo experience minutes from the venue.</p>
+        <p>Beautiful Airbnbs are available across Cairo, from leafy Zamalek to historic Downtown, offering a more local Cairo experience just minutes from the venue.</p>
       </div>
     </section>
 
@@ -152,49 +176,63 @@
 
       <div class="intro">
         <h2>Discover the Magic</h2>
-        <p>While you're in Cairo, take time to explore one of history's greatest civilizations. Here are our favourite places to visit.</p>
+        <p>
+          While you're in Cairo, take time to explore one of history's greatest civilizations. Here are our favourite places to visit.
+        </p>
       </div>
 
       <div class="place-card">
-        <img src="/images/pyramids-sphinx.jpg" alt="Pyramids of Giza">
-        <div>
+        <div class="place-image-frame">
+          <img src="/images/pyramids-sphinx.jpg" alt="Pyramids of Giza">
+        </div>
+
+        <div class="place-content">
           <p class="photo-label">Ancient Wonder of the World</p>
           <h3>Pyramids of Giza</h3>
-          <p>Stand in awe before the last remaining wonder of the ancient world. The Great Pyramid of Khufu rises from the desert just 30 minutes from the Four Seasons.</p>
+          <p>Stand in awe before the last remaining wonder of the ancient world. The Great Pyramid of Khufu, 4,500 years old, rises from the desert just 30 minutes from the Four Seasons. And don't forget to ride a camel, it is a Cairo rite of passage.</p>
           <em>✦ Arrive at dawn, the desert glows pink and the crowds are nowhere to be seen.</em>
           <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Pyramids+of+Giza">Explore →</a>
         </div>
       </div>
 
       <div class="place-card">
-        <img src="/images/grand-egyptian-museum.jpg" alt="Grand Egyptian Museum">
-        <div>
+        <div class="place-image-frame">
+          <img src="/images/grand-egyptian-museum.jpg" alt="Grand Egyptian Museum">
+        </div>
+
+        <div class="place-content">
           <p class="photo-label">The World's Largest Archaeological Museum</p>
           <h3>Grand Egyptian Museum</h3>
-          <p>The GEM houses over 100,000 artifacts including the treasures of Tutankhamun. At night, the monument is bathed in golden light.</p>
+          <p>Opened in 2023, the GEM houses over 100,000 artifacts including the complete treasures of Tutankhamun. The dramatic glass and stone façade overlooks the Pyramids themselves, and at night, the entire monument is bathed in golden light.</p>
           <em>✦ Visit after dark, the illuminated façade is unforgettable.</em>
           <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Grand+Egyptian+Museum">Explore →</a>
         </div>
       </div>
 
       <div class="place-card">
-        <img src="/images/nile.jpg" alt="The Nile">
-        <div>
+        <div class="place-image-frame">
+          <img src="/images/nile.jpg" alt="Downtown Cairo and the Nile">
+        </div>
+
+        <div class="place-content">
           <p class="photo-label">Belle Époque, Khan el-Khalili & River Views</p>
           <h3>Downtown Cairo & the Nile</h3>
-          <p>Wander through Khedivial Cairo's grand boulevards, lose yourself in Khan el-Khalili, and end the day with sunset over the Nile.</p>
+          <p>Wander through Khedivial Cairo's grand Belle Époque boulevards, then lose yourself in the labyrinthine alleys of Khan el-Khalili bazaar. Sip mint tea at El-Fishawy Café and end the day with sunset over the Nile.</p>
           <em>✦ Visit Khan el-Khalili in the evening when the lanterns glow.</em>
           <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Downtown+Cairo+Nile">Explore →</a>
         </div>
       </div>
 
       <div class="place-card">
-        <img src="/images/sheikh-zayed.jpg" alt="Sheikh Zayed">
-        <div>
+        <div class="place-image-frame">
+          <img src="/images/sheikh-zayed.jpg" alt="Arkan Plaza New Zayed">
+        </div>
+
+        <div class="place-content">
           <p class="photo-label">Green Suburbs & Open-Air Dining</p>
           <h3>Arkan Plaza, New Zayed</h3>
-          <p>Arkan Plaza is a social heart of New Zayed, with boutiques, cafés, outdoor dining, fountains, and a beautiful evening atmosphere.</p>
-          <em>✦ Go in the evening when the plaza lights come on.</em>
+          <p>Arkan Plaza is the social heart of New Zayed, a beautifully landscaped open-air piazza of artisan boutiques, breezy outdoor cafés, and weekend farmers' markets. After sunset the trees and fountains light up and the whole plaza glows.</p>
+          <em>✦ Go in the evening when the plaza lights come on, it is at its most magical.</em>
           <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Arkan+Plaza+New+Zayed">Explore →</a>
         </div>
       </div>
@@ -207,10 +245,12 @@
         <span></span>
       </div>
 
-      <img src="/images/flower.jpg" class="rsvp-flower" alt="Flowers">
+      <img src="/images/flower.jpg" class="rsvp-flower" alt="Soft wedding flowers">
 
       <h2>Kindly Reply</h2>
-      <p class="rsvp-note">Please RSVP by <em>August 1, 2026.</em> We look forward to celebrating with you in the heart of Cairo.</p>
+      <p class="rsvp-note">
+        Please RSVP by <em>August 1, 2026.</em> We look forward to celebrating with you in the heart of Cairo.
+      </p>
 
       <form name="wedding-rsvp" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="rsvp-form">
         <input type="hidden" name="form-name" value="wedding-rsvp">
@@ -262,7 +302,7 @@
   </main>
 
   <footer>
-    <img src="/images/flower.jpg" alt="Flowers">
+    <img src="/images/flower.jpg" alt="Soft wedding flowers">
     <h2>Maggy & Emre</h2>
     <p>October 23, 2026 · Cairo, Egypt</p>
     <span>With love & joy ✦</span>
