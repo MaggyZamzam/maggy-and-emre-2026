@@ -258,10 +258,10 @@ nav a {
 
 .detail-box {
   text-align: center;
-  padding: -10px 35px;
+  padding: 8px 25px;
   border-bottom: 1px solid var(--border);
   background: #fcfaf6;
-  margin: 10px 0;
+  min-height: unset;
 }
 
 .detail-box:last-child {
