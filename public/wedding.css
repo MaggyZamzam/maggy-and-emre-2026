@@ -292,12 +292,15 @@ h3 {
   font-family: "Halvetica Neue", Arial, serif;
   line-height: 1.1;
   color: #000000;
+  font-style: regular;
+  font-weight: 300;
+  
 }
 
 .detail-box h3 {
   font-size: clamp(26px, 6vw, 46px);
   color: #000000;
-  font-size: 17px
+  font-size: 17px;
   margin: 2;
   padding: 2;
   line-height: 2;
