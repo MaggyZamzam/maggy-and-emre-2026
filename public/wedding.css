@@ -290,7 +290,10 @@ h3 {
 }
 
 .detail-box h3 {
-  font-size: clamp(28px, 6vw, 46px);
+  font-size: clamp(26px, 6vw, 46px);
+  color: #000000;
+  font-size: 17px
+  
   margin: 10px 0;
 }
 
@@ -298,7 +301,7 @@ h3 {
 .intro h2,
 .rsvp-section h2,
 footer h2 {
-  font-size: clamp(28px, 7vw, 62px);
+  font-size: clamp(26px, 7vw, 62px);
   color: #000000;
   margin: 15px 0;
 }
