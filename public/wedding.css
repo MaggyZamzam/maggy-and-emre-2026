@@ -275,12 +275,12 @@ nav a {
 }
 
 .label {
-  color: #3a1118;
+  color: var(--sage);
   font-weight: 350;
   margin: 1.8;
   padding: 2;
   line-height: 1.8;
-  font-size: 10px;
+  font-size: 6px;
   
 }
 
