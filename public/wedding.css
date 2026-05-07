@@ -317,6 +317,8 @@ footer h2 {
   font-size: clamp(26px, 7vw, 62px);
   color: #000000;
   margin: 15px 0;
+  colo: #d8c1c2;
+  
 }
 
 .rsvp-section h2 {
