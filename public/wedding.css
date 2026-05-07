@@ -235,9 +235,9 @@ nav a {
   font-family: "Cormorant Garamond", serif;
   font-style: Regular;
   color: var(--sage);
-  font-size: clamp(36px, 5vw, 46px);
+  font-size: clamp(40px, 5vw, 46px);
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   white-space: nowrap;
   margin: 0;
