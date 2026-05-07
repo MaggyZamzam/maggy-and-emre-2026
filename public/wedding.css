@@ -395,6 +395,7 @@ footer h2 {
   letter-spacing: 5px;
   font-weight: 600;
   text-align: left;
+  display: inline-block;
 }
 
 .timeline {
