@@ -490,6 +490,7 @@ footer h2 {
 
 .intro h2 {
   color: var(--rose);
+  font-size: 17px;
 }
 
 .intro p {
