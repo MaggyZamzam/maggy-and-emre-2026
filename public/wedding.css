@@ -270,16 +270,16 @@ nav a {
 
 .icon {
   font-size: 28px;
-  margin-bottom: 2;
-  line-height: 2.5;
+  margin-bottom: 1.5;
+  line-height: 2;
 }
 
 .label {
   color: #3a1118;
   font-weight: 300;
-  margin: 2;
+  margin: 1.5;
   padding: 2;
-  line-height: 2;
+  line-height: 1.5;
   
 }
 
@@ -301,9 +301,9 @@ h3 {
   font-size: clamp(26px, 6vw, 46px);
   color: #000000;
   font-size: 17px;
-  margin: 2;
+  margin: 1.5;
   padding: 2;
-  line-height: 2;
+  line-height: 1.5;
 }
 
 .info-card h2,
@@ -328,12 +328,12 @@ footer h2 {
   font-size: 19px;
   color: var(--muted);
   padding: 2;
-  line-height: 2;
-  margin: 2;
+  line-height: 1.5;
+  margin: 1.5;
 }
 .detail-box > * {
-  margin-top: 1.5px;
-  margin-bottom: 1.5px;
+  margin-top: 1.2px;
+  margin-bottom: 1.2px;
 }
 
 .info-card p,
