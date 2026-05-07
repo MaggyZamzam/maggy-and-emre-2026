@@ -495,7 +495,7 @@ footer h2 {
 
 .intro p {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 13px; !important; 
 }
 
 .place-card {
