@@ -328,7 +328,7 @@ footer h2 {
 .place-card h3 {
   font-size: clamp(24px, 5vw, 42px);
   margin: 16px 0;
-  font-size: 6px;
+  font-size: 18px;
   font-style: regular;
   font-family: "Cormorant Garamond", serif;
   font-weight: 600;
