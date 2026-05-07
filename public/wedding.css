@@ -402,8 +402,8 @@ footer h2 {
   left: -56px;
   top: 36px;
   width: 2px;
-  height: calc (100% + 25px);
-  nackground: rgba (184, 132, 139, 0.55);
+  height: calc (100% + 26px);
+  background: rgba (184, 132, 139, 0.55);
 
 }
 
