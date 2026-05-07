@@ -286,7 +286,7 @@ h3 {
 }
 
 .detail-box h3 {
-  font-size: clamp(32px, 5vw, 46px);
+  font-size: clamp(28px, 6vw, 46px);
   margin: 10px 0;
 }
 
