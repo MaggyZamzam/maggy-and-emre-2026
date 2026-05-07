@@ -75,8 +75,8 @@ nav a {
 }
 
 .hero {
-  min-height: 850px;
-  padding: 90px 7% 120px;
+  min-height: 700px;
+  padding: 80px 7% 120px;
   text-align: center;
   position: relative;
   overflow: hidden;
