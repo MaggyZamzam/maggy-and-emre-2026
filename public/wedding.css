@@ -130,10 +130,10 @@ nav a {
 
 .hero h1 {
   font-family: "Cormorant Infant", serif;
-  font-size: clamp(75px, 16vw, 175px);
+  font-size: clamp(60px, 16vw, 175px);
   line-height: 0.9;
   font-style: regular;
-  font-weight: 245;
+  font-weight: 200;
   color: #5a2a33;
   letter-spacing: -1px
   margin: 70px 0 40px;
