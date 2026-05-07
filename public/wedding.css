@@ -49,7 +49,7 @@ body {
   font-weight: 700;
   color: var(--text);
   text-decoration: none;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
 }
 
 .menu-btn {
