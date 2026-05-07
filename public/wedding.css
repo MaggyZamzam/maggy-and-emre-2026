@@ -831,5 +831,13 @@ footer span {
   button[type="submit"] {
     width: 100%;
   }
+  
+  section > *:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  section {
+    padding-bottom: 10px !important!
+  }
 }
 
