@@ -250,14 +250,14 @@ nav a {
 .details-card {
   max-width: 880px;
   margin: auto;
-  border: 1px solid var(--border);
+  border: none;
 }
 
 .detail-box {
   text-align: center;
   padding: 42px 35px;
   border-bottom: 1px solid var(--border);
-  background: var(--paper-soft);
+  background: #fcfaf6;
 }
 
 .detail-box:last-child {
