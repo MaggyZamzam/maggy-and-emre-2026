@@ -497,7 +497,8 @@ section.intro h2 {
 
 .intro p {
   color: var(--muted);
-  font-size: 18px; !important; 
+  font-size: 17px; !important;
+  font-weight: 300
 }
 
 .place-card {
