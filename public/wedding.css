@@ -399,11 +399,11 @@ footer h2 {
 
 .timeline-item:not(:last-child) .timeline {
   position: absolute;
-  left: -56px;
-  top: 36px;
+  left: -55px;
+  top: 34px;
   width: 2px;
   height: calc (100% + 26px);
-  background: rgba (184, 132, 139, 0.55);
+  background: #7d9274;
 
 }
 
