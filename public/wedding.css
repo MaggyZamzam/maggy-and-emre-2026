@@ -280,7 +280,7 @@ nav a {
   margin: 1.8;
   padding: 2;
   line-height: 1.8;
-  font-size: 6px;
+  font-size: 6px; !important;
   
 }
 
