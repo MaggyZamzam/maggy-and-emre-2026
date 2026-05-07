@@ -153,10 +153,10 @@ nav a {
   font-family: "Halvetica Neue", Arial, serif;
   font-size: 7px;
   letter-spacing: 1px;
-  margin-top: 60px;
+  margin-top: 40px;
   position: relative;
   font-style: regular;
-  font-weight: 100;
+  font-weight: 90;
   z-index: 2;
   color: var(--sage);
 }
