@@ -470,7 +470,7 @@ footer h2 {
   text-transform: uppercase;
   letter-spacing: 5px;
   margin: 0;
-  font-size: 17px;
+  font-size: 13px;
 }
 
 .timeline-item h3 {
@@ -749,7 +749,7 @@ footer span {
   .timeline-item span,
   .rsvp-note,
   .venue-card p {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .intro p {
