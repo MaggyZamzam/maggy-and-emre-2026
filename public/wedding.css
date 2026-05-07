@@ -150,12 +150,13 @@ nav a {
 }
 
 .hero h2 {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Halvetica Neue", Arial, serif;
   font-size: 48px;
   letter-spacing: 8px;
   margin-top: 70px;
   position: relative;
   z-index: 2;
+  color: var(--sage);
 }
 
 .hero .eyebrow,
