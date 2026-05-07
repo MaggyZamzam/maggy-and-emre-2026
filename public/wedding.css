@@ -390,11 +390,11 @@ footer h2 {
 .text-link,
 .place-card a {
   display: inline-block;
-  margin-top: 17px;
-  color: var(--sage);
+  margin-top: 14px;
+  color: 292725;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   font-weight: 400;
   text-align: left;
   display: inline-block;
