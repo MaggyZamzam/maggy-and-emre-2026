@@ -280,6 +280,7 @@ nav a {
   margin: 1.8;
   padding: 2;
   line-height: 1.8;
+  font-size: 13px;
   
 }
 
@@ -300,11 +301,12 @@ h3 {
 .detail-box h3 {
   font-size: clamp(26px, 6vw, 46px);
   color: #000000;
-  font-size: 17px;
+  font-size: 20px;
   margin: 1.8;
   padding: 2;
   line-height: 1.8;
   font-family: "Cormorant Garamond", serif;
+  font-style: bold;
 }
 
 .info-card h2,
