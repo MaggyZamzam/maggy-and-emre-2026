@@ -222,10 +222,10 @@ nav a {
 }
 
 .section {
-  padding-top: 80px;
+  padding-top: 40px;
   padding-left: 7%px;
   padding-right: 7%px;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
   border-top: 1px solid var(--border);
 }
 
