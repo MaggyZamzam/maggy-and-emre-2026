@@ -488,7 +488,7 @@ footer h2 {
   margin: 0 auto 70px;
 }
 
-.intro h2 {
+.section.intro h2 {
   color: var(--rose);
   font-size: 26px;
 }
@@ -754,7 +754,7 @@ footer span {
     font-size: 13px;
   }
 
-  .intro p {
+  section.intro p {
     font-size: 22px;
   }
 
