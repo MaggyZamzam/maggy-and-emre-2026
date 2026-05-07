@@ -515,6 +515,7 @@ footer h2 {
 
 .place-content {
   padding: 24px 28px 18px;
+  text-align: justify;
 }
 
 .photo-label {
