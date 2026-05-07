@@ -270,14 +270,14 @@ nav a {
 
 .icon {
   font-size: 28px;
-  margin-bottom: 6;
+  margin-bottom: 4;
   line-height: 2.5;
 }
 
 .label {
   color: #3a1118;
-  font-weight: 450;
-  margin: 4;
+  font-weight: 300;
+  margin: 2;
   padding: 2;
   line-height: 2.5;
   
@@ -298,7 +298,7 @@ h3 {
   font-size: clamp(26px, 6vw, 46px);
   color: #000000;
   font-size: 17px
-  margin: 4;
+  margin: 2;
   padding: 2;
   line-height: 2.5;
 }
@@ -326,11 +326,11 @@ footer h2 {
   color: var(--muted);
   padding: 2;
   line-height: 2.5;
-  margin: 4;
+  margin: 2;
 }
 .detail-box > * {
-  margin-top: 4px;
-  margin-bottom: 4px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 .info-card p,
