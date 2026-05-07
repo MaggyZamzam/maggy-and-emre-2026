@@ -276,11 +276,11 @@ nav a {
 
 .label {
   color: #3a1118;
-  font-weight: 300;
+  font-weight: 350;
   margin: 1.8;
   padding: 2;
   line-height: 1.8;
-  font-size: 13px;
+  font-size: 10px;
   
 }
 
@@ -301,12 +301,13 @@ h3 {
 .detail-box h3 {
   font-size: clamp(26px, 6vw, 46px);
   color: #000000;
-  font-size: 20px;
+  font-size: 24px;
   margin: 1.8;
   padding: 2;
   line-height: 1.8;
   font-family: "Cormorant Garamond", serif;
   font-style: bold;
+  font-weight: 500;
 }
 
 .info-card h2,
