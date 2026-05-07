@@ -804,6 +804,7 @@ footer span {
   .photo-label {
     font-size: 6px;
     letter-spacing: 1px;
+    text-align: left;
   }
 
   .place-card em {
