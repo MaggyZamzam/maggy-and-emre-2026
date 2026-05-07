@@ -275,12 +275,12 @@ nav a {
 }
 
 .detail-box label {
-  color: var(--sage);
-  font-weight: 350;
+  color: var(--sage); !important;
+  font-weight: 350; !important;
   margin: 1.8;
   padding: 2;
   line-height: 1.8;
-  font-size: 6px; !important;
+  font-size: 4px; !important;
   
 }
 
