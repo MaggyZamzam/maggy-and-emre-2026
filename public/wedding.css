@@ -756,6 +756,9 @@ footer span {
 
   .place-card p {
     font-size: 14px;
+    text-align: justify;
+    text-align-last: left;
+    text-color: #bfcbb8;
   }
 
   .timeline-item h3 {
