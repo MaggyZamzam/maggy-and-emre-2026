@@ -283,6 +283,7 @@ h2,
 h3 {
   font-family: "Cormorant Infant", serif;
   line-height: 1.1;
+  color: #000000;
 }
 
 .detail-box h3 {
@@ -437,8 +438,9 @@ footer h2 {
 }
 
 .timeline-item h3 {
-  font-size: 32px;
+  font-size: 28px;
   margin: 5px 0;
+  color: #000000;
 }
 
 .intro {
