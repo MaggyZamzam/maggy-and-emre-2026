@@ -375,6 +375,17 @@ footer h2 {
   margin-bottom: 60px;
 }
 
+.timeline-line {
+  position: absolute;
+  left: -55px;
+  top: 35px;
+  width: 2px;
+  heights: calc(100% + 25px);
+  background: #5f7157;
+  z-index: 0;
+  
+}
+
 .timeline-item::before {
   content: "";
   position: absolute;
@@ -384,6 +395,7 @@ footer h2 {
   height: 34px;
   background: rgba(216, 193, 194, 0.28);
   border-radius: 50%;
+  z-index: 2;
 }
 
 .timeline-item::after {
@@ -395,6 +407,7 @@ footer h2 {
   height: 12px;
   background: #4b1f28;;
   border-radius: 50%;
+  z-index: 3;
 }
 
 .timeline-item:not(:last-child) .timeline {
