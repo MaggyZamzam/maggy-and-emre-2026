@@ -418,8 +418,9 @@ footer h2 {
   top: 35px;
   width: 2px;
   heights: calc(100% + 25px);
-  background: #5f7157;
+  color: #5f7157;
   z-index: 0;
+  
   
 }
 
