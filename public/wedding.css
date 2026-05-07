@@ -276,7 +276,7 @@ nav a {
 }
 
 .detail-accent {
-  color: #3a1118 !important;
+  color: var(--rose) !important;
 }
 
 h2,
