@@ -258,7 +258,7 @@ nav a {
 
 .detail-box {
   text-align: center;
-  padding: 1px 25px;
+  padding: 0;
   border-bottom: 1px solid var(--border);
   background: #fcfaf6;
   min-height: unset;
@@ -270,7 +270,7 @@ nav a {
 
 .icon {
   font-size: 28px;
-  margin-bottom: 12px;
+  margin-bottom: 5px;
 }
 
 .label {
@@ -294,7 +294,8 @@ h3 {
   font-size: clamp(26px, 6vw, 46px);
   color: #000000;
   font-size: 17px
-  margin: 5px 0;
+  margin: 0;
+  padding: 0;
 }
 
 .info-card h2,
@@ -318,6 +319,7 @@ footer h2 {
 .detail-box p {
   font-size: 19px;
   color: var(--muted);
+  padding: 0;
 }
 
 .info-card p,
