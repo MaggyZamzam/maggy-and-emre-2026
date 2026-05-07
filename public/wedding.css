@@ -305,7 +305,7 @@ footer h2 {
 }
 
 .place-card h3 {
-  font-size: clamp(28px, 5vw, 42px);
+  font-size: clamp(24px, 5vw, 42px);
   margin: 16px 0;
 }
 
