@@ -210,9 +210,15 @@
       <h2>Kindly Reply</h2>
       <p class="rsvp-note">Please RSVP by <em>August 1, 2026.</em> We look forward to celebrating with you in the heart of Cairo.</p>
 
+    <div class="rsvp-options">
       <a href="https://forms.gle/CJJm6not6WGdd7xT7" target="_blank" class="btn primary rsvp-google-btn">
         RSVP Here
       </a>
+      <a href="#netlify-rsvp" class="btn sceondary rsvp-google-btn">
+        RSVP on This Website
+      </a>
+    </div>
+        <form id="netlify-rsvp" name="wedding-rsvp" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" class="rsvp-form">
         <input type="hidden" name="form-name" value="wedding-rsvp">
 
         <p class="hidden"><label>Do not fill this out: <input name="bot-field"></label></p>
