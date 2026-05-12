@@ -774,6 +774,13 @@ footer span {
     text-align-last: left;
     text-color: #bfcbb8;
   }
+  .travel-card h3 {
+    font-size: 18px;
+    text-align: justify;
+    text-align-last: left;
+    text-color: #bfcbb8;
+    
+  }
 
   .timeline-item h3 {
     font-size: 22px;
