@@ -820,6 +820,20 @@ footer span {
   .rsvp-google-btn {
     display: inline-block;
     margin-top: 35px;
+  } 
+  .rsvp-options {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+
+.rsvp-google-btn {
+  display: inline-block;
+}
+
+
   }
   input,
   select,
