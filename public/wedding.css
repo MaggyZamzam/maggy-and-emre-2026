@@ -817,7 +817,10 @@ footer span {
   .place-card em {
     font-size: 13px;
   }
-
+  .rsvp-google-btn {
+    display: inline-block;
+    margin-top: 35px;
+  }
   input,
   select,
   textarea {
